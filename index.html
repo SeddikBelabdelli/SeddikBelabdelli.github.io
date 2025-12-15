@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Belabdelli Seddik</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CONFIGURATION & VARIABLES --- */
+        :root {
+            --bg-body: #0a0f1c;
+            --primary: #6366f1;
+            --secondary: #06b6d4;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #ffffff;
+            --text-gray: #94a3b8;
+            --success: #10b981;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* --- BACKGROUND --- */
+        .background-blobs {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden;
+        }
+        .blob {
+            position: absolute; filter: blur(80px); opacity: 0.4; animation: move 20s infinite alternate;
+        }
+        .blob-1 { top: -10%; left: -10%; width: 500px; height: 500px; background: var(--primary); border-radius: 40% 60% 70% 30%; }
+        .blob-2 { bottom: -10%; right: -10%; width: 400px; height: 400px; background: var(--secondary); border-radius: 60% 40% 30% 70%; animation-delay: -5s; }
+        @keyframes move { 0% { transform: translate(0, 0) rotate(0deg); } 100% { transform: translate(50px, 50px) rotate(20deg); } }
+
+        /* --- NAV --- */
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000;
+            backdrop-filter: blur(15px); background: rgba(10, 15, 28, 0.8); border-bottom: 1px solid var(--glass-border);
+        }
+        .logo { font-size: 1.5rem; font-weight: 800; color: white; letter-spacing: -0.5px; }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { color: var(--text-gray); text-decoration: none; font-weight: 500; transition: 0.3s; font-size: 0.95rem; }
+        .nav-links a:hover { color: white; }
+        .burger { display: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+        /* --- HERO --- */
+        #hero { min-height: 100vh; display: flex; align-items: center; padding: 0 10%; padding-top: 80px; }
+        /* Badge supprimé, style ajusté */
+        h1 { font-size: 4.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; }
+        .typing-text { color: var(--secondary); }
+        .hero-desc { font-size: 1.2rem; color: var(--text-gray); margin-bottom: 2.5rem; max-width: 700px; }
+        /* Boutons supprimés */
+
+        /* --- SECTIONS --- */
+        section { padding: 6rem 10%; }
+        .section-header { margin-bottom: 4rem; }
+        .section-subtitle { color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; }
+        .section-title { font-size: 2.5rem; font-weight: 700; margin-top: 0.5rem; }
+
+        /* --- E4 GRID (PDFs) --- */
+        .pdf-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; }
+        @media (min-width: 1024px) { .pdf-grid { grid-template-columns: 1fr 1fr; } }
+        
+        .pdf-container {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 1.5rem;
+            border-radius: 20px;
+            height: 700px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .pdf-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .pdf-header h3 { font-size: 1.2rem; font-weight: 700; }
+        
+        .pdf-frame {
+            width: 100%;
+            flex: 1;
+            border: none;
+            border-radius: 12px;
+            background-color: #fff;
+        }
+
+        /* --- PARCOURS (TIMELINE) --- */
+        .timeline { border-left: 2px solid var(--glass-border); margin-left: 1rem; padding-left: 2rem; }
+        .timeline-item { position: relative; margin-bottom: 3rem; }
+        .timeline-item::before { content: ''; position: absolute; left: -2.6rem; top: 5px; width: 16px; height: 16px; background: var(--secondary); border-radius: 50%; box-shadow: 0 0 10px var(--secondary); }
+        .t-date { color: var(--text-gray); font-size: 0.9rem; margin-bottom: 0.5rem; display: block; }
+        .t-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .t-place { color: var(--primary); font-weight: 600; font-size: 1rem; margin-bottom: 1rem; display: block; }
+        .t-desc { color: var(--text-gray); font-size: 0.95rem; }
+
+        /* --- PLACEHOLDERS --- */
+        .empty-placeholder {
+            border: 2px dashed var(--glass-border);
+            border-radius: 16px;
+            padding: 3rem;
+            text-align: center;
+            color: var(--text-gray);
+            background: rgba(255,255,255,0.02);
+        }
+
+        /* --- VEILLE --- */
+        .veille-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; }
+        .veille-info { background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(6, 182, 212, 0.05)); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 20px; padding: 2rem; height: fit-content; }
+        .v-card { background: var(--glass); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--glass-border); margin-bottom: 1rem; transition: 0.3s; }
+        .v-card:hover { background: rgba(255,255,255,0.08); }
+
+        /* --- CONTACT (SIMPLE) --- */
+        .contact-simple {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border-radius: 24px;
+            padding: 4rem 2rem;
+            text-align: center;
+            border: 1px solid var(--glass-border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .btn-contact {
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .btn-gmail {
+            background: #EA4335;
+            color: white;
+            box-shadow: 0 10px 20px -10px rgba(234, 67, 53, 0.5);
+        }
+        .btn-gmail:hover { background: #c5221f; transform: translateY(-3px); }
+
+        .btn-linkedin {
+            background: #0077b5;
+            color: white;
+            box-shadow: 0 10px 20px -10px rgba(0, 119, 181, 0.5);
+        }
+        .btn-linkedin:hover { background: #005885; transform: translateY(-3px); }
+
+
+        /* --- MOBILE --- */
+        @media (max-width: 900px) {
+            h1 { font-size: 3rem; }
+            .veille-layout { grid-template-columns: 1fr; }
+            .pdf-container { height: 500px; }
+            .nav-links { display: none; }
+            .burger { display: block; }
+            .mobile-menu { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: #0a0f1c; z-index: 999; flex-direction: column; justify-content: center; align-items: center; display: none; }
+            .mobile-menu.open { display: flex; }
+            .mobile-menu a { font-size: 1.5rem; margin: 1rem 0; color: white; text-decoration: none; }
+        }
+        
+        .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#hero" onclick="toggleMenu()">Accueil</a>
+        <a href="#e4" onclick="toggleMenu()">Épreuve E4</a>
+        <a href="#parcours" onclick="toggleMenu()">Parcours</a>
+        <a href="#skills" onclick="toggleMenu()">Compétences</a>
+        <a href="#projets" onclick="toggleMenu()">Projets</a>
+        <a href="#veille" onclick="toggleMenu()">Veille</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
+
+    <nav>
+        <div class="logo"></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Accueil</a></li>
+            <li><a href="#e4" style="color:var(--secondary);">Épreuve E4</a></li>
+            <li><a href="#parcours">Parcours</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#veille">Veille</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="burger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-content reveal">
+            <h1>Belabdelli <br>Seddik</h1>
+            <h2 style="font-size: 2rem; margin-bottom: 1.5rem; font-weight: 600;">
+                Je suis <span class="typing-text" id="typing"></span>
+            </h2>
+            <p class="hero-desc">
+                Je suis actuellement élève de BTS SIO au lycée Gaston Berger à Lille, en option Solutions d'Infrastructure, Systèmes et Réseaux (SISR).
+            </p>
+            </div>
+    </section>
+
+    <section id="e4">
+        <div class="section-header reveal">
+            <span class="section-subtitle">Support et mise à disposition de services</span>
+            <h2 class="section-title">Documents Épreuve E4</h2>
+        </div>
+
+        <div class="pdf-grid reveal">
+            
+            <div class="pdf-container">
+                <div class="pdf-header">
+                    <h3>Tableau de Synthèse (Annexe 6-1)</h3>
+                    <i class="fas fa-table" style="color:var(--primary); font-size:1.5rem;"></i>
+                </div>
+                <iframe src="tableau_synthese.pdf" class="pdf-frame" title="Tableau de Synthèse">
+                    <p>Votre navigateur ne supporte pas les PDF. <a href="tableau_synthese.pdf">Télécharger</a>.</p>
+                </iframe>
+            </div>
+
+            <div class="pdf-container">
+                <div class="pdf-header">
+                    <h3>Attestation de Stage (CITC)</h3>
+                    <i class="fas fa-file-contract" style="color:var(--success); font-size:1.5rem;"></i>
+                </div>
+                <iframe src="attestation_stage.pdf" class="pdf-frame" title="Attestation de Stage">
+                    <p>Votre navigateur ne supporte pas les PDF. <a href="attestation_stage.pdf">Télécharger</a>.</p>
+                </iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="parcours">
+        <div class="section-header reveal">
+            <span class="section-subtitle">Mon cheminement</span>
+            <h2 class="section-title">Parcours Scolaire</h2>
+        </div>
+        <div class="timeline reveal">
+            
+            <div class="timeline-item">
+                <span class="t-date" style="color:var(--primary); font-weight:bold;">Mai 2026 - Juillet 2026</span>
+                <h3 class="t-title">Stage en Cybersécurité</h3>
+                <span class="t-place">CITC - Digital Innovation Hub, Lille</span>
+                <p class="t-desc">
+                    Stage sous la supervision de l'Ingénieur Cybersécurité M. Karifala Camara.
+                    Missions au sein du pôle EuraRFID.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <span class="t-date">2025 - 2027 (En cours)</span>
+                <h3 class="t-title">BTS Services Informatiques aux Organisations (SIO)</h3>
+                <span class="t-place">Lycée Gaston Berger, Lille</span>
+                <p class="t-desc">
+                    Option SISR (Solutions d'Infrastructure, Systèmes et Réseaux).
+                </p>
+            </div>
+            <div class="timeline-item">
+                <span class="t-date">2025</span>
+                <h3 class="t-title">Baccalauréat</h3>
+                <span class="t-place">Lycée César Baggio, Lille</span>
+                <p class="t-desc">Obtention du baccalauréat.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-header reveal">
+            <span class="section-subtitle">Stack Technique</span>
+            <h2 class="section-title">Mes Compétences</h2>
+        </div>
+        <div class="reveal">
+            <div class="empty-placeholder">
+                <i class="fas fa-tools" style="font-size: 2rem; margin-bottom: 1rem; color:var(--text-gray);"></i>
+                <p>Section en cours de mise à jour.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets">
+        <div class="section-header reveal">
+            <span class="section-subtitle">Réalisations Concrètes</span>
+            <h2 class="section-title">Mes Projets</h2>
+        </div>
+        <div class="reveal">
+            <div class="empty-placeholder">
+                <i class="fas fa-code-branch" style="font-size: 2rem; margin-bottom: 1rem; color:var(--text-gray);"></i>
+                <p>Section en cours de mise à jour.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="veille">
+        <div class="section-header reveal">
+            <span class="section-subtitle">Actualité & Recherche</span>
+            <h2 class="section-title">Veille Technologique</h2>
+        </div>
+        
+        <div class="veille-layout reveal">
+            <div class="veille-info">
+                <h3 style="margin-bottom:1rem; font-size:1.5rem;">IA & Cyberdéfense</h3>
+                <p style="color:var(--text-gray); margin-bottom:2rem;">
+                    <strong>Problématique :</strong> « Comment l'Intelligence Artificielle générative transforme-t-elle les stratégies de défense face aux nouvelles cybermenaces ? »
+                </p>
+                <div style="margin-bottom:1rem;">
+                    <strong style="color:var(--primary)">Outils :</strong><br>
+                    <span style="font-size:0.9rem; color:var(--text-gray);">Feedly, Google Alerts, Europresse</span>
+                </div>
+            </div>
+
+            <div class="veille-cards">
+                <article class="v-card">
+                    <span style="font-size:0.8rem; color:var(--secondary); font-weight:bold;">28 Nov 2025 • Europresse</span>
+                    <h4 style="margin:0.5rem 0;">Menace : Phishing automatisé</h4>
+                    <p style="font-size:0.9rem; color:var(--text-gray);">Utilisation de WormGPT pour créer des attaques sans fautes de syntaxe, contournant les filtres classiques.</p>
+                </article>
+                <article class="v-card">
+                    <span style="font-size:0.8rem; color:var(--secondary); font-weight:bold;">05 Déc 2025 • LeMagIT</span>
+                    <h4 style="margin:0.5rem 0;">Défense : SOC Augmentés</h4>
+                    <p style="font-size:0.9rem; color:var(--text-gray);">L'IA filtre 80% des logs pour réduire le bruit et laisse les analystes gérer les attaques complexes.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <div class="section-header reveal">
+            <span class="section-subtitle">Diplômes & Badges</span>
+            <h2 class="section-title">Certifications</h2>
+        </div>
+        <div class="reveal">
+            <div class="empty-placeholder">
+                <i class="fas fa-certificate" style="font-size: 2rem; margin-bottom: 1rem; color:var(--text-gray);"></i>
+                <p>Section en cours de mise à jour.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-simple reveal">
+            <h2 style="margin-bottom:1rem;">Me contacter</h2>
+            <div style="display:flex; gap:2rem; flex-wrap:wrap; justify-content:center;">
+                <a href="mailto:seddikbelabdelli@gmail.com" class="btn-contact btn-gmail">
+                    <i class="fas fa-envelope"></i> seddikbelabdelli@gmail.com
+                </a>
+                
+                <a href="#" target="_blank" class="btn-contact btn-linkedin">
+                    <i class="fab fa-linkedin"></i> Mon LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align:center; padding:2rem; color:var(--text-gray); font-size:0.9rem; border-top:1px solid var(--glass-border);">
+        <p>&copy; 2025 Belabdelli Seddik. Portfolio BTS SIO.</p>
+    </footer>
+
+    <script>
+        // Menu Mobile
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('open');
+        }
+
+        // Typing Effect
+        const textElement = document.getElementById('typing');
+        const texts = ["Étudiant en BTS SIO"];
+        let count = 0, index = 0, letter = "";
+        
+        (function type() {
+            if (count === texts.length) count = 0;
+            letter = texts[count].slice(0, ++index);
+            textElement.textContent = letter;
+            if (letter.length === texts[count].length) {
+                setTimeout(function(){}, 2000);
+            } else {
+                setTimeout(type, 100);
+            }
+        }());
+
+        // Scroll Reveal
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('.reveal').forEach(el => {
+                if(el.getBoundingClientRect().top < window.innerHeight - 100) el.classList.add('active');
+            });
+        });
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
+    </script>
+</body>
+</html>
