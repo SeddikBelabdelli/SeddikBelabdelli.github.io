@@ -60,17 +60,29 @@
         .t-place { font-size: 0.95rem; color: var(--secondary); font-weight: 500; display: block; margin-bottom: 0.5rem; }
         .t-desc { color: var(--text-gray); font-size: 0.95rem; }
 
-        /* --- STAGES GRID --- */
-        .grid-stages { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-        .skill-card { 
-            background: var(--glass); 
-            padding: 1.5rem; 
-            border-radius: 12px; 
+        /* --- STAGES PRESENTATION BLOCKS --- */
+        .stage-container { display: flex; flex-direction: column; gap: 2.5rem; }
+        .stage-block {
+            background: var(--glass);
             border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem;
             transition: 0.3s;
         }
-        .skill-card:hover { border-color: var(--primary); background: rgba(255,255,255,0.08); }
-        .skill-link { color: var(--secondary); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; }
+        .stage-block:hover { border-color: var(--primary); background: rgba(255,255,255,0.07); }
+        .stage-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+        .stage-company { font-size: 1.6rem; color: #f1f5f9; font-weight: 700; }
+        .stage-company span { color: var(--secondary); font-size: 1.1rem; font-weight: 500; display: block; margin-top: 0.2rem;}
+        .stage-date { background: rgba(99, 102, 241, 0.15); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.3); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.9rem; font-weight: 600; }
+        
+        .stage-body h4 { font-size: 1.1rem; color: var(--primary); margin-bottom: 0.5rem; font-weight: 600; }
+        .stage-body p { color: var(--text-gray); margin-bottom: 1.5rem; font-size: 0.95rem; }
+        .stage-missions { list-style: none; padding-left: 0; }
+        .stage-missions li { position: relative; padding-left: 1.5rem; color: #e2e8f0; font-size: 0.95rem; margin-bottom: 0.5rem; }
+        .stage-missions li::before { content: "→"; position: absolute; left: 0; color: var(--secondary); font-weight: bold; }
+        
+        .stage-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--secondary); text-decoration: none; font-weight: 600; margin-top: 1rem; font-size: 0.95rem; transition: 0.2s; }
+        .stage-link:hover { text-decoration: underline; color: var(--primary); }
 
         /* --- SKILLS BLOCS --- */
         .bloc-competence { margin-bottom: 3rem; }
@@ -288,41 +300,61 @@
 
     <section id="stages">
         <h2 class="section-title">Expériences en Entreprise (Stages)</h2>
-        <p class="section-subtitle">Mes réalisations pratiques durant mes périodes de stage.</p>
+        <p class="section-subtitle">Présentation des structures d'accueil et des missions réalisées pendant mon cursus.</p>
 
-        <h3 style="color: var(--secondary); margin-bottom: 1.5rem;"><i class="fas fa-calendar-alt"></i> Stage de 1ère Année</h3>
-        <div class="grid-stages" style="margin-bottom: 4rem;">
-            <div class="skill-card">
-                <h3>Gérer le patrimoine informatique</h3>
-                <a href="Grille évaluation Epreuve E5.pdf" class="skill-link"><i class="fas fa-external-link-alt"></i> Voir la preuve</a>
-            </div>
-            <div class="skill-card">
-                <h3>Répondre aux incidents et aux demandes d'assistance et d'évolution</h3>
-                <a href="#" class="skill-link"><i class="fas fa-external-link-alt"></i> Voir la preuve</a>
-            </div>
-            <div class="skill-card">
-                <h3>Développer la présence en ligne de l'organisation</h3>
-                <a href="#" class="skill-link"><i class="fas fa-external-link-alt"></i> Voir la preuve</a>
-            </div>
-            <div class="skill-card">
-                <h3>Travailler en mode projet</h3>
-                <a href="#" class="skill-link"><i class="fas fa-external-link-alt"></i> Voir la preuve</a>
-            </div>
-        </div>
+        <div class="stage-container">
+            <div class="stage-block">
+                <div class="stage-header">
+                    <div class="stage-company">
+                        CITC - Digital Innovation Hub
+                        <span>Lille, France</span>
+                    </div>
+                    <div class="stage-date">Stage de 1ère Année • Mai 2026 - Juillet 2026</div>
+                </div>
+                
+                <div class="stage-body">
+                    <h4>Présentation de l'entreprise</h4>
+                    <p>
+                        Le CITC (Centre d'Innovation des Technologies Sans Contact) est un pôle d'innovation numérique basé à Lille, spécialisé dans l'Internet des Objets (IoT), l'intelligence artificielle et la cybersécurité. Il accompagne les entreprises régionales dans leur transformation numérique et sécurise leurs infrastructures.
+                    </p>
+                    
+                    <h4>Ce que j'ai fait (Missions & Réalisations)</h4>
+                    <ul class="stage-missions">
+                        <li>Observation et assistance auprès de M. Karifala Camara, Ingénieur Cybersécurité.</li>
+                        <li>Analyse des risques d'infrastructure et audit de sécurité sur des maquettes d'évaluation.</li>
+                        <li>Participation à la mise en œuvre de solutions de détection et de traitement des incidents réseaux.</li>
+                        <li>Rédaction de documentations techniques et fiches de bonnes pratiques de sécurité.</li>
+                    </ul>
 
-        <h3 style="color: var(--secondary); margin-bottom: 1.5rem;"><i class="fas fa-clock"></i> Stage de 2ème Année (À venir)</h3>
-        <div class="grid-stages">
-            <div class="skill-card">
-                <h3>Mettre à disposition des utilisateurs un service informatique</h3>
-                <a href="#" class="skill-link"><i class="fas fa-external-link-alt"></i> Voir la preuve</a>
+                    <a href="Grille évaluation Epreuve E5.pdf" class="stage-link"><i class="fas fa-file-pdf"></i> Consulter le rapport ou la grille d'évaluation E5</a>
+                </div>
             </div>
-            <div class="skill-card">
-                <h3>Organiser son développement professionnel</h3>
-                <a href="#" class="skill-link"><i class="fas fa-external-link-alt"></i> Voir la preuve</a>
-            </div>
-            <div class="skill-card">
-                <h3>Capacité à rendre compte d'un travail réalisé au sein d'une équipe projet</h3>
-                <a href="#" class="skill-link"><i class="fas fa-external-link-alt"></i> Voir la preuve</a>
+
+            <div class="stage-block">
+                <div class="stage-header">
+                    <div class="stage-company">
+                        [Nom de l'Entreprise - Stage 2]
+                        <span>[Ville, Exemple : Lille]</span>
+                    </div>
+                    <div class="stage-date">Stage de 2ème Année • À venir</div>
+                </div>
+                
+                <div class="stage-body">
+                    <h4>Présentation de l'entreprise</h4>
+                    <p>
+                        [Remplacer ce texte par une courte description de votre deuxième entreprise d'accueil, son domaine d'activité et la taille de son parc informatique].
+                    </p>
+                    
+                    <h4>Ce que j'ai fait (Missions attendues / réalisées)</h4>
+                    <ul class="stage-missions">
+                        <li>[Mission 1 : Exemple - Supervision du réseau informatique d'entreprise via l'outil Zabbix]</li>
+                        <li>[Mission 2 : Exemple - Déploiement et migration de postes clients via un serveur WDS/MDT]</li>
+                        <li>[Mission 3 : Exemple - Configuration des règles de filtrage de firewall et gestion des accès VPN]</li>
+                        <li>[Mission 4 : Exemple - Assistance utilisateur et résolution d'incidents de niveau 1 et 2]</li>
+                    </ul>
+
+                    <a href="#" class="stage-link"><i class="fas fa-link"></i> Justificatifs et livrables à venir</a>
+                </div>
             </div>
         </div>
     </section>
