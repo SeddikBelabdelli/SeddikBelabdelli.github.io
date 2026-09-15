@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Belabdelli Seddik — BTS SIO SISR</title>
+    <title>Portfolio Épreuve E5 | Belabdelli Seddik — BTS SIO SISR</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -13,10 +13,10 @@
         :root {
             --bg-body: #0a0f1d;
             --surface: rgba(17, 24, 39, 0.75);
-            --surface-card: rgba(30, 41, 59, 0.6);
-            --surface-hover: rgba(51, 65, 85, 0.8);
+            --surface-card: rgba(30, 41, 59, 0.65);
+            --surface-hover: rgba(51, 65, 85, 0.85);
             --border: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(99, 102, 241, 0.4);
+            --border-hover: rgba(99, 102, 241, 0.45);
             
             --primary: #6366f1;
             --primary-glow: rgba(99, 102, 241, 0.25);
@@ -46,24 +46,23 @@
             position: relative;
         }
 
-        /* Arrière-plan moderne avec dégradés lumineux (glows) */
         body::before, body::after {
             content: '';
             position: fixed;
-            width: 500px;
-            height: 500px;
+            width: 550px;
+            height: 550px;
             border-radius: 50%;
             filter: blur(140px);
             z-index: -1;
             pointer-events: none;
         }
         body::before {
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.15), transparent 70%);
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.16), transparent 70%);
             top: -100px;
             right: -100px;
         }
         body::after {
-            background: radial-gradient(circle, rgba(56, 189, 248, 0.12), transparent 70%);
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.13), transparent 70%);
             bottom: -100px;
             left: -100px;
         }
@@ -72,13 +71,13 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            max-width: 1280px;
+            max-width: 1320px;
             margin: 0 auto;
             padding: 1.5rem;
             gap: 1.5rem;
         }
 
-        /* HEADER FLOTTANT MODERNE */
+        /* HEADER FLOTTANT */
         header {
             background: var(--surface);
             backdrop-filter: blur(16px);
@@ -113,7 +112,6 @@
             font-weight: 800;
             font-size: 1rem;
             box-shadow: 0 4px 15px var(--primary-glow);
-            letter-spacing: -0.5px;
         }
 
         .brand-info h1 {
@@ -129,30 +127,32 @@
             font-weight: 600;
         }
 
-        /* NAVIGATION TABS EN PILULE */
+        /* NAVIGATION TABS */
         .nav-tabs {
             display: flex;
-            gap: 0.35rem;
+            gap: 0.3rem;
             list-style: none;
             background: rgba(15, 23, 42, 0.6);
             padding: 0.35rem;
             border-radius: var(--radius-lg);
             border: 1px solid var(--border);
+            overflow-x: auto;
         }
 
         .tab-btn {
             border: none;
             background: transparent;
-            padding: 0.55rem 0.95rem;
+            padding: 0.55rem 0.9rem;
             border-radius: 8px;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             font-weight: 600;
             color: var(--text-muted);
             cursor: pointer;
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.45rem;
+            white-space: nowrap;
         }
 
         .tab-btn:hover {
@@ -161,13 +161,13 @@
         }
 
         .tab-btn.active {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(56, 189, 248, 0.2));
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.22), rgba(56, 189, 248, 0.22));
             color: #ffffff;
-            border: 1px solid rgba(99, 102, 241, 0.4);
+            border: 1px solid rgba(99, 102, 241, 0.45);
             box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
         }
 
-        /* CONTENEUR PRINCIPAL */
+        /* MAIN CONTAINER */
         main {
             flex: 1;
             background: var(--surface);
@@ -182,8 +182,8 @@
 
         .tab-panel {
             display: none;
-            padding: 3rem;
-            min-height: 520px;
+            padding: 2.8rem;
+            min-height: 550px;
         }
 
         .tab-panel.active {
@@ -192,14 +192,14 @@
         }
 
         @keyframes modernFade {
-            from { opacity: 0; transform: translateY(10px) scale(0.995); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .view-title {
-            font-size: 2rem;
+            font-size: 1.95rem;
             font-weight: 800;
-            letter-spacing: -0.7px;
+            letter-spacing: -0.6px;
             margin-bottom: 0.3rem;
             background: linear-gradient(135deg, #ffffff 40%, var(--text-muted) 100%);
             -webkit-background-clip: text;
@@ -212,13 +212,9 @@
             margin-bottom: 2.2rem;
         }
 
-        /* ACCUEIL (HERO) */
+        /* HERO / ACCUEIL */
         .hero-layout {
-            max-width: 860px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100%;
+            max-width: 900px;
         }
 
         .badge-soft {
@@ -227,11 +223,11 @@
             gap: 0.6rem;
             background: rgba(99, 102, 241, 0.12);
             color: #a5b4fc;
-            padding: 0.4rem 0.9rem;
+            padding: 0.4rem 0.95rem;
             border-radius: 9999px;
             font-size: 0.8rem;
             font-weight: 600;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.4rem;
             border: 1px solid rgba(99, 102, 241, 0.25);
             width: fit-content;
         }
@@ -245,136 +241,125 @@
         }
 
         .hero-title {
-            font-size: 3.4rem;
+            font-size: 3.2rem;
             font-weight: 800;
             line-height: 1.15;
-            margin-bottom: 1.4rem;
-            letter-spacing: -1.5px;
+            margin-bottom: 1.3rem;
+            letter-spacing: -1.3px;
             background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .hero-lead {
-            font-size: 1.12rem;
+            font-size: 1.1rem;
             color: var(--text-muted);
-            margin-bottom: 2.5rem;
+            margin-bottom: 2.2rem;
             line-height: 1.7;
-        }
-
-        .hero-lead strong {
-            color: #f1f5f9;
-            font-weight: 600;
         }
 
         .hero-shortcuts {
             display: flex;
-            gap: 1rem;
+            gap: 0.9rem;
             flex-wrap: wrap;
         }
 
         .btn-shortcut {
             background: var(--surface-card);
             border: 1px solid var(--border);
-            padding: 0.8rem 1.4rem;
+            padding: 0.75rem 1.3rem;
             border-radius: var(--radius-md);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 600;
             color: var(--text-main);
             cursor: pointer;
             transition: all 0.2s ease;
             display: flex;
             align-items: center;
-            gap: 0.6rem;
+            gap: 0.55rem;
         }
 
-        .btn-shortcut i {
-            color: var(--accent);
-            transition: transform 0.2s;
-        }
-
+        .btn-shortcut i { color: var(--accent); }
         .btn-shortcut:hover {
             border-color: var(--accent);
-            background: rgba(56, 189, 248, 0.08);
+            background: rgba(56, 189, 248, 0.1);
             transform: translateY(-2px);
         }
 
-        .btn-shortcut:hover i {
-            transform: scale(1.15);
-        }
-
-        /* TIMELINE (PARCOURS) */
-        .timeline {
-            border-left: 2px solid rgba(255, 255, 255, 0.08);
-            padding-left: 2rem;
-            margin-left: 0.8rem;
-            position: relative;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 2.2rem;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: calc(-2rem - 6px);
-            top: 4px;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: var(--primary);
-            border: 3px solid var(--bg-body);
-            box-shadow: 0 0 12px var(--primary);
-        }
-
-        .t-date {
-            font-size: 0.8rem;
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 600;
-            color: var(--accent);
-            margin-bottom: 0.3rem;
-            display: inline-block;
-        }
-
-        .t-title {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: #ffffff;
-        }
-
-        .t-place {
-            font-size: 0.9rem;
-            color: #cbd5e1;
-            font-weight: 500;
-            margin-bottom: 0.4rem;
-            display: block;
-        }
-
-        .t-desc {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        /* CARTES DE COMPÉTENCES (BENTO) */
-        .bloc-competence {
+        /* PARCOURS DE PROFESSIONNALISATION (5 PTS) */
+        .pro-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 2rem;
             margin-bottom: 2.5rem;
         }
 
-        .bloc-title {
-            font-size: 1.15rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
+        .pro-card {
+            background: var(--surface-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.6rem;
+        }
+
+        .pro-card h3 {
+            font-size: 1.1rem;
             color: #ffffff;
+            margin-bottom: 0.8rem;
             display: flex;
             align-items: center;
             gap: 0.6rem;
         }
 
+        .pro-card h3 i { color: var(--primary); }
+        .pro-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.8rem; }
+
+        .timeline {
+            border-left: 2px solid rgba(255, 255, 255, 0.08);
+            padding-left: 1.8rem;
+            margin-left: 0.6rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 1.8rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: calc(-1.8rem - 6px);
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid var(--bg-body);
+            box-shadow: 0 0 10px var(--primary);
+        }
+
+        .t-date {
+            font-size: 0.78rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .t-title { font-size: 1.05rem; font-weight: 700; color: #ffffff; margin-top: 0.1rem; }
+        .t-place { font-size: 0.85rem; color: #cbd5e1; display: block; margin-bottom: 0.3rem; }
+        .t-desc { font-size: 0.88rem; color: var(--text-muted); }
+
+        /* LISTE DES SOUS-COMPÉTENCES CLIQUABLES (2 PTS) */
+        .bloc-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.8rem 0 1rem 0;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
         .bloc-title::before {
             content: '';
-            display: inline-block;
             width: 4px;
             height: 16px;
             background: var(--primary);
@@ -383,7 +368,7 @@
 
         .grid-skills {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
             gap: 1rem;
         }
 
@@ -404,143 +389,180 @@
             transform: translateY(-2px);
         }
 
-        .subskill-card p {
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #e2e8f0;
-            margin-bottom: 1.2rem;
+        .skill-code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            display: inline-block;
         }
 
-        .proof-btn {
+        .subskill-card p {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin-bottom: 1rem;
+        }
+
+        .clickable-btn {
             align-self: flex-start;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: 600;
             color: var(--accent);
-            text-decoration: none;
             background: rgba(56, 189, 248, 0.1);
             border: 1px solid rgba(56, 189, 248, 0.25);
             padding: 0.45rem 0.85rem;
             border-radius: 6px;
+            cursor: pointer;
             transition: all 0.2s;
             display: inline-flex;
             align-items: center;
             gap: 0.4rem;
         }
 
-        .proof-btn:hover {
+        .clickable-btn:hover {
             background: var(--accent);
             color: #0f172a;
             border-color: var(--accent);
         }
 
-        /* STAGES */
-        .stage-card {
+        /* RÉALISATIONS PROFESSIONNELLES (RP) (CLIQUABLES - 2 PTS + 3 PTS STAGE + 3 PTS ATTESTATION + 3 PTS AP) */
+        .rp-card {
             background: var(--surface-card);
             border: 1px solid var(--border);
             border-radius: var(--radius-lg);
-            padding: 1.8rem;
+            padding: 1.6rem;
             margin-bottom: 1.5rem;
-            transition: 0.25s;
+            cursor: pointer;
+            transition: all 0.25s;
         }
 
-        .stage-card:hover {
-            border-color: var(--border-hover);
+        .rp-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
         }
 
-        .stage-header {
+        .rp-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 1.2rem;
             flex-wrap: wrap;
             gap: 0.8rem;
+            margin-bottom: 0.8rem;
         }
 
-        .stage-title {
-            font-size: 1.3rem;
+        .rp-title {
+            font-size: 1.25rem;
             font-weight: 700;
             color: #ffffff;
         }
 
-        .stage-title span {
+        .rp-title span {
             color: var(--accent);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 500;
             display: block;
             margin-top: 0.2rem;
         }
 
-        .stage-tag {
-            background: rgba(99, 102, 241, 0.15);
+        .rp-badge {
+            background: rgba(99, 102, 241, 0.18);
             color: #c7d2fe;
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            font-size: 0.8rem;
-            font-weight: 600;
+            border: 1px solid rgba(99, 102, 241, 0.35);
+            font-size: 0.75rem;
+            font-weight: 700;
             padding: 0.35rem 0.85rem;
             border-radius: 9999px;
             font-family: 'JetBrains Mono', monospace;
         }
 
-        .stage-body h4 {
-            font-size: 0.95rem;
-            color: #f1f5f9;
-            margin-top: 1.2rem;
-            margin-bottom: 0.4rem;
-            font-weight: 700;
+        .rp-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
         }
 
-        .stage-body p {
-            font-size: 0.9rem;
+        .tag-pill {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.75rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            color: #cbd5e1;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* ATTESTATION DE STAGE (3 PTS) */
+        .attestation-box {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(56, 189, 248, 0.08));
+            border: 1px solid rgba(99, 102, 241, 0.35);
+            border-radius: var(--radius-lg);
+            padding: 1.6rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .attestation-info h4 {
+            font-size: 1.05rem;
+            color: #ffffff;
+            margin-bottom: 0.3rem;
+        }
+        .attestation-info p {
+            font-size: 0.88rem;
             color: var(--text-muted);
         }
 
-        .stage-list {
-            list-style: none;
-            margin-top: 0.5rem;
+        /* TABLEAU DE SYNTHÈSE OFFICIEL (2 PTS) */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 1.5rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
         }
 
-        .stage-list li {
-            font-size: 0.9rem;
-            color: #cbd5e1;
-            position: relative;
-            padding-left: 1.3rem;
-            margin-bottom: 0.4rem;
+        table.synthese-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            text-align: left;
         }
 
-        .stage-list li::before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: var(--primary);
+        table.synthese-table th, table.synthese-table td {
+            padding: 0.9rem 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        table.synthese-table th {
+            background: rgba(15, 23, 42, 0.9);
+            color: #f1f5f9;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        table.synthese-table tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .check-icon {
+            color: var(--emerald);
             font-weight: bold;
+            font-size: 1.1rem;
+            text-align: center;
+            display: block;
         }
 
-        /* VEILLE TECHNOLOGIQUE */
-        .veille-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.6fr;
-            gap: 1.5rem;
-        }
-
-        .veille-box {
-            background: var(--surface-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 1.8rem;
-        }
-
-        .veille-card {
-            background: var(--surface-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 1.4rem;
-            margin-bottom: 1.2rem;
-            transition: all 0.2s;
-        }
-
-        .veille-card:hover {
-            border-color: var(--border-hover);
-        }
+        /* VEILLE */
+        .veille-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 1.5rem; }
+        .veille-box { background: var(--surface-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.8rem; }
+        .veille-card { background: var(--surface-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.4rem; margin-bottom: 1.2rem; }
 
         .btn-secure {
             background: rgba(239, 68, 68, 0.12);
@@ -556,76 +578,60 @@
             gap: 0.5rem;
             transition: all 0.2s;
         }
-
-        .btn-secure:hover {
-            background: rgba(239, 68, 68, 0.25);
-            color: #ffffff;
-            border-color: #ef4444;
-        }
-
-        /* BOITES VIDES / CERTIFICATIONS & PROJETS */
-        .empty-box {
-            background: var(--surface-card);
-            border: 1px dashed rgba(255, 255, 255, 0.15);
-            border-radius: var(--radius-lg);
-            padding: 3.5rem 2rem;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        .empty-box i {
-            margin-bottom: 1rem;
-            filter: drop-shadow(0 0 15px var(--primary-glow));
-        }
+        .btn-secure:hover { background: rgba(239, 68, 68, 0.25); color: #ffffff; border-color: #ef4444; }
 
         /* CONTACT */
-        .contact-grid {
-            display: flex;
-            gap: 1.2rem;
-            flex-wrap: wrap;
-            margin-top: 1.5rem;
-        }
-
+        .contact-grid { display: flex; gap: 1.2rem; flex-wrap: wrap; margin-top: 1.5rem; }
         .contact-pill {
-            display: flex;
+            display: flex; align-items: center; gap: 0.8rem; padding: 1rem 1.8rem;
+            border-radius: 9999px; font-weight: 600; font-size: 0.95rem; text-decoration: none;
+            color: #ffffff; transition: all 0.25s ease; box-shadow: var(--shadow-card);
+        }
+        .pill-mail { background: linear-gradient(135deg, #ea4335, #c5221f); }
+        .pill-linkedin { background: linear-gradient(135deg, #0a66c2, #004182); }
+
+        /* MODALE POUR SOUS-COMPÉTENCES & RP CLIQUABLES */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(6px);
+            z-index: 100;
             align-items: center;
-            gap: 0.8rem;
-            padding: 1rem 1.8rem;
-            border-radius: 9999px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            color: #ffffff;
-            transition: all 0.25s ease;
-            box-shadow: var(--shadow-card);
-            border: 1px solid transparent;
+            justify-content: center;
+            padding: 1.5rem;
         }
+        .modal.active { display: flex; }
+        .modal-content {
+            background: #0f172a;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-lg);
+            max-width: 650px;
+            width: 100%;
+            padding: 2rem;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+        }
+        .modal-close {
+            position: absolute;
+            top: 1.2rem; right: 1.2rem;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+        .modal-close:hover { color: #ffffff; }
 
-        .pill-mail {
-            background: linear-gradient(135deg, #ea4335, #c5221f);
-        }
-        .pill-mail:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(234, 67, 53, 0.3);
-        }
-
-        .pill-linkedin {
-            background: linear-gradient(135deg, #0a66c2, #004182);
-        }
-        .pill-linkedin:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(10, 102, 194, 0.3);
-        }
-
-        /* RESPONSIVE */
         @media (max-width: 960px) {
             .app-container { padding: 1rem; }
             header { flex-direction: column; gap: 1rem; align-items: stretch; position: static; }
-            .nav-tabs { overflow-x: auto; padding-bottom: 0.5rem; width: 100%; }
-            .tab-panel { padding: 1.8rem 1.2rem; }
-            .hero-title { font-size: 2.3rem; }
-            .veille-grid { grid-template-columns: 1fr; }
+            .nav-tabs { overflow-x: auto; width: 100%; }
+            .tab-panel { padding: 1.6rem 1rem; }
+            .hero-title { font-size: 2.2rem; }
+            .pro-grid, .veille-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -638,19 +644,19 @@
                 <div class="brand-avatar">SB</div>
                 <div class="brand-info">
                     <h1>Belabdelli Seddik</h1>
-                    <span>BTS SIO — SISR</span>
+                    <span>BTS SIO SISR • Session 2026</span>
                 </div>
             </div>
 
             <nav>
                 <ul class="nav-tabs">
                     <li><button class="tab-btn active" onclick="switchTab('accueil')"><i class="fas fa-home"></i> Accueil</button></li>
-                    <li><button class="tab-btn" onclick="switchTab('parcours')"><i class="fas fa-graduation-cap"></i> Parcours</button></li>
-                    <li><button class="tab-btn" onclick="switchTab('competences')"><i class="fas fa-check-circle"></i> Compétences</button></li>
-                    <li><button class="tab-btn" onclick="switchTab('stages')"><i class="fas fa-briefcase"></i> Stages</button></li>
+                    <li><button class="tab-btn" onclick="switchTab('parcours')"><i class="fas fa-user-graduate"></i> Parcours (5pts)</button></li>
+                    <li><button class="tab-btn" onclick="switchTab('competences')"><i class="fas fa-check-double"></i> Compétences (2pts)</button></li>
+                    <li><button class="tab-btn" onclick="switchTab('rp')"><i class="fas fa-folder-open"></i> Réalisations RP (2pts)</button></li>
+                    <li><button class="tab-btn" onclick="switchTab('stages')"><i class="fas fa-briefcase"></i> Stage & Attestation (6pts)</button></li>
+                    <li><button class="tab-btn" onclick="switchTab('synthese')"><i class="fas fa-table"></i> Synthèse E5 (2pts)</button></li>
                     <li><button class="tab-btn" onclick="switchTab('veille')"><i class="fas fa-satellite-dish"></i> Veille</button></li>
-                    <li><button class="tab-btn" onclick="switchTab('certifs')"><i class="fas fa-award"></i> Certifications</button></li>
-                    <li><button class="tab-btn" onclick="switchTab('projets')"><i class="fas fa-network-wired"></i> Projets</button></li>
                     <li><button class="tab-btn" onclick="switchTab('contact')"><i class="fas fa-envelope"></i> Contact</button></li>
                 </ul>
             </nav>
@@ -662,158 +668,369 @@
             <div id="accueil" class="tab-panel active">
                 <div class="hero-layout">
                     <div class="badge-soft">
-                        <span class="badge-dot"></span> Session BTS 2026 • Lycée Gaston Berger
+                        <span class="badge-dot"></span> Épreuve E5 • Support de soutenance BTS SIO
                     </div>
                     <h2 class="hero-title">Infrastructures, Systèmes & Cybersécurité</h2>
                     <p class="hero-lead">
-                        Bonjour et bienvenue sur mon portfolio d'épreuve. Étudiant en deuxième année de <strong>BTS SIO (option SISR)</strong> à Lille, je prépare mes acquis techniques en administration réseau, déploiement de serveurs et durcissement des environnements de travail.
+                        Bienvenue sur mon portfolio de compétences. Étudiant en 2ème année de <strong>BTS SIO (option SISR)</strong> au Lycée Gaston Berger de Lille, je documente ici mes acquis d'administration système, réseaux d'entreprise et missions de cybersécurité réalisées lors de mon stage au <strong>CITC-EuraRFID</strong>[cite: 1].
                     </p>
                     <div class="hero-shortcuts">
                         <button class="btn-shortcut" onclick="switchTab('stages')">
-                            <i class="fas fa-briefcase"></i> Découvrir mon stage au CITC
+                            <i class="fas fa-shield-alt"></i> Stage CITC & Attestation
                         </button>
-                        <button class="btn-shortcut" onclick="switchTab('competences')">
-                            <i class="fas fa-tasks"></i> Tableau de compétences E5
+                        <button class="btn-shortcut" onclick="switchTab('rp')">
+                            <i class="fas fa-laptop-code"></i> Réalisations Professionnelles (AP)
                         </button>
-                        <button class="btn-shortcut" onclick="switchTab('veille')">
-                            <i class="fas fa-shield-alt"></i> Veille Technologique
+                        <button class="btn-shortcut" onclick="switchTab('synthese')">
+                            <i class="fas fa-table"></i> Tableau de synthèse E5
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- ONGLET 2 : PARCOURS -->
+            <!-- ONGLET 2 : PARCOURS DE PROFESSIONNALISATION (5 POINTS) -->
             <div id="parcours" class="tab-panel">
-                <h2 class="view-title">Parcours Scolaire</h2>
-                <p class="view-subtitle">Mon cheminement de formation vers les métiers de l'administration réseau.</p>
+                <h2 class="view-title">Parcours de Professionnalisation</h2>
+                <p class="view-subtitle">Évolution académique, objectifs de carrière et posture professionnelle.</p>
+
+                <div class="pro-grid">
+                    <div class="pro-card">
+                        <h3><i class="fas fa-compass"></i> Projet Professionnel & Ambition</h3>
+                        <p>
+                            Passionné par l'architecture réseau et la protection des données, mon objectif est d'évoluer vers le métier d'<strong>Administrateur Systèmes & Réseaux</strong> puis de me spécialiser en tant qu'<strong>Analyste Cybersécurité / Consultant SOC</strong>.
+                        </p>
+                        <p>
+                            La formation au Lycée Gaston Berger m'a permis d'acquérir les fondations du modèle OSI, du routage Cisco, de l'administration Active Directory et du durcissement d'infrastructures.
+                        </p>
+                        <p style="margin-top: 1rem;">
+                            <strong>Poursuite d'études ciblée :</strong> Licence Professionnelle ou Bachelor Cybersécurité & Cloud en alternance.
+                        </p>
+                    </div>
+
+                    <div class="pro-card">
+                        <h3><i class="fas fa-lightbulb"></i> Compétences Clés Mobilisées</h3>
+                        <p>• <strong>Réseau :</strong> Routage inter-VLAN, DHCP/DNS, NAT, VPN IPsec/OpenVPN, filtrage pare-feu.</p>
+                        <p>• <strong>Système :</strong> Windows Server 2022 (AD DS, GPO, DNS), distributions Linux (Debian, Ubuntu).</p>
+                        <p>• <strong>Sécurité :</strong> Audits de vulnérabilités, segmentation réseau, gestion des habilitations et veilles CERT-FR.</p>
+                    </div>
+                </div>
+
                 <div class="timeline">
                     <div class="timeline-item">
-                        <span class="t-date">Mai 2026 - Juillet 2026</span>
-                        <h3 class="t-title">Stage en Cybersécurité</h3>
-                        <span class="t-place">CITC — Digital Innovation Hub, Lille</span>
-                        <p class="t-desc">Missions au sein du pôle EuraRFID sous la supervision de l'ingénieur cybersécurité M. Karifala Camara.</p>
+                        <span class="t-date">2025 - 2027 (En cours)</span>
+                        <h3 class="t-title">BTS Services Informatiques aux Organisations (Option SISR)</h3>
+                        <span class="t-place">Lycée Gaston Berger, Lille</span>
+                        <p class="t-desc">Administration réseaux d'entreprise, virtualisation Proxmox/VMware, supervision et gestion de patrimoine informatique.</p>
                     </div>
                     <div class="timeline-item">
-                        <span class="t-date">2025 - 2027 (En cours)</span>
-                        <h3 class="t-title">BTS Services Informatiques aux Organisations (SIO)</h3>
-                        <span class="t-place">Lycée Gaston Berger, Lille</span>
-                        <p class="t-desc">Option Solutions d’Infrastructure, Systèmes et Réseaux (SISR) : protocoles IP, routage Cisco, virtualisation et sécurité.</p>
+                        <span class="t-date">26 Mai 2026 - 03 Juillet 2026</span>
+                        <h3 class="t-title">Stage en Cybersécurité & Réseaux IoT</h3>
+                        <span class="t-place">CITC — Digital Innovation Hub (EuraRFID), Lille</span>
+                        <p class="t-desc">Missions sous la responsabilité de M. Karifala Camara, Ingénieur Cybersécurité. Cartographie d'équipements et audit de sécurité[cite: 1].</p>
                     </div>
                     <div class="timeline-item">
                         <span class="t-date">2025</span>
                         <h3 class="t-title">Baccalauréat</h3>
                         <span class="t-place">Lycée César Baggio, Lille</span>
-                        <p class="t-desc">Obtention du baccalauréat et orientation vers le domaine informatique.</p>
+                        <p class="t-desc">Obtention du baccalauréat et orientation dans la filière informatique d'infrastructure.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- ONGLET 3 : COMPÉTENCES -->
+            <!-- ONGLET 3 : LISTE DES SOUS-COMPÉTENCES CLIQUABLES (2 POINTS) -->
             <div id="competences" class="tab-panel">
-                <h2 class="view-title">Compétences SISR (Épreuve E5)</h2>
-                <p class="view-subtitle">Justificatifs rattachés aux blocs du référentiel officiel BTS SIO.</p>
+                <h2 class="view-title">Sous-compétences Référentiel SISR</h2>
+                <p class="view-subtitle">Cliquez sur chaque sous-compétence pour visualiser sa fiche de description et les contextes de réalisation.</p>
 
                 <div class="bloc-competence">
-                    <h3 class="bloc-title">1. Gérer le patrimoine informatique</h3>
+                    <h3 class="bloc-title">Bloc 1 : Gérer le patrimoine informatique</h3>
                     <div class="grid-skills">
                         <div class="subskill-card">
-                            <p>Recenser et identifier les ressources numériques</p>
-                            <a href="#" class="proof-btn"><i class="fas fa-file-pdf"></i> Fiche preuve</a>
+                            <div>
+                                <span class="skill-code">B1.1</span>
+                                <p>Recenser et identifier les ressources numériques</p>
+                            </div>
+                            <button class="clickable-btn" onclick="openSkillModal('B1.1', 'Recenser et identifier les ressources numériques', 'Réalisation d\'une cartographie complète du parc d\'équipements IoT et bornes RFID au sein de la plateforme EuraRFID (CITC). Mise en place d\'un tableau d\'inventaire IP/MAC et OS.')">
+                                <i class="fas fa-search-plus"></i> Voir fiche preuve
+                            </button>
                         </div>
+
                         <div class="subskill-card">
-                            <p>Exploiter des référentiels, normes et standards adoptés</p>
-                            <a href="#" class="proof-btn"><i class="fas fa-file-pdf"></i> Fiche preuve</a>
+                            <div>
+                                <span class="skill-code">B1.2</span>
+                                <p>Exploiter des référentiels, normes et standards</p>
+                            </div>
+                            <button class="clickable-btn" onclick="openSkillModal('B1.2', 'Exploiter des référentiels, normes et standards', 'Application des guides d\'hygiène informatique de l\'ANSSI pour la sécurisation des postes de travail et respect des protocoles réseau IEEE 802.1Q.')">
+                                <i class="fas fa-search-plus"></i> Voir fiche preuve
+                            </button>
                         </div>
+
                         <div class="subskill-card">
-                            <p>Mettre en place et vérifier les niveaux d'habilitation</p>
-                            <a href="#" class="proof-btn"><i class="fas fa-file-pdf"></i> Fiche preuve</a>
+                            <div>
+                                <span class="skill-code">B1.3</span>
+                                <p>Mettre en place et vérifier les niveaux d'habilitation</p>
+                            </div>
+                            <button class="clickable-btn" onclick="openSkillModal('B1.3', 'Mettre en place et vérifier les niveaux d\'habilitation', 'Configuration des Unités Organisationnelles (OU) et stratégies de groupes (GPO) sous Windows Server 2022. Principe du moindre privilège.')">
+                                <i class="fas fa-search-plus"></i> Voir fiche preuve
+                            </button>
                         </div>
+
                         <div class="subskill-card">
-                            <p>Vérifier les conditions de la continuité d'un service informatique</p>
-                            <a href="#" class="proof-btn"><i class="fas fa-file-pdf"></i> Fiche preuve</a>
+                            <div>
+                                <span class="skill-code">B1.4</span>
+                                <p>Vérifier les conditions de la continuité d'un service</p>
+                            </div>
+                            <button class="clickable-btn" onclick="openSkillModal('B1.4', 'Vérifier la continuité d\'un service informatique', 'Sauvegarde automatisée des tables de routage, export des configurations commutateurs Cisco et scripts de réplication de bases de données.')">
+                                <i class="fas fa-search-plus"></i> Voir fiche preuve
+                            </button>
                         </div>
+
                         <div class="subskill-card">
-                            <p>Gérer des sauvegardes régulières</p>
-                            <a href="#" class="proof-btn"><i class="fas fa-file-pdf"></i> Fiche preuve</a>
+                            <div>
+                                <span class="skill-code">B1.5</span>
+                                <p>Gérer des sauvegardes régulières</p>
+                            </div>
+                            <button class="clickable-btn" onclick="openSkillModal('B1.5', 'Gérer des sauvegardes régulières', 'Mise en œuvre d\'une stratégie 3-2-1 avec sauvegardes différentielles et tests de restauration sur serveur de test.')">
+                                <i class="fas fa-search-plus"></i> Voir fiche preuve
+                            </button>
                         </div>
+
                         <div class="subskill-card">
-                            <p>Vérifier le respect des règles d'utilisation des ressources</p>
-                            <a href="#" class="proof-btn"><i class="fas fa-file-pdf"></i> Fiche preuve</a>
+                            <div>
+                                <span class="skill-code">B1.6</span>
+                                <p>Vérifier le respect des règles d'utilisation des ressources</p>
+                            </div>
+                            <button class="clickable-btn" onclick="openSkillModal('B1.6', 'Vérifier le respect des règles d\'utilisation', 'Contrôle des flux sortants et filtrage URL/DNS via passerelle pfSense. Analyse des journaux de logs d\'accès.')">
+                                <i class="fas fa-search-plus"></i> Voir fiche preuve
+                            </button>
                         </div>
                     </div>
                 </div>
 
                 <div class="bloc-competence">
-                    <h3 class="bloc-title">2. Répondre aux incidents et aux demandes d'assistance</h3>
+                    <h3 class="bloc-title">Bloc 2 : Répondre aux incidents et demandes d'assistance</h3>
                     <div class="grid-skills">
                         <div class="subskill-card">
-                            <p>Collecter, suivre et orienter des demandes (Ticketing)</p>
-                            <a href="#" class="proof-btn"><i class="fas fa-file-pdf"></i> Fiche preuve</a>
+                            <div>
+                                <span class="skill-code">B2.1</span>
+                                <p>Collecter, suivre et orienter les demandes (Ticketing)</p>
+                            </div>
+                            <button class="clickable-btn" onclick="openSkillModal('B2.1', 'Collecter, suivre et orienter les demandes', 'Utilisation de l\'outil GLPI pour la réception des tickets d\'incidents, classification par criticité et attribution aux techniciens.')">
+                                <i class="fas fa-search-plus"></i> Voir fiche preuve
+                            </button>
                         </div>
+
                         <div class="subskill-card">
-                            <p>Traiter des demandes concernant les services réseau et système</p>
-                            <a href="#" class="proof-btn"><i class="fas fa-file-pdf"></i> Fiche preuve</a>
-                        </div>
-                        <div class="subskill-card">
-                            <p>Traiter des demandes concernant les applications</p>
-                            <a href="#" class="proof-btn"><i class="fas fa-file-pdf"></i> Fiche preuve</a>
+                            <div>
+                                <span class="skill-code">B2.2</span>
+                                <p>Traiter des demandes concernant les services réseau et système</p>
+                            </div>
+                            <button class="clickable-btn" onclick="openSkillModal('B2.2', 'Traiter des demandes réseau et système', 'Résolution de pannes DHCP (épuisement de plage IP), rétablissement de liens trunk 802.1Q et déverrouillage de sessions Active Directory.')">
+                                <i class="fas fa-search-plus"></i> Voir fiche preuve
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- ONGLET 4 : STAGES -->
-            <div id="stages" class="tab-panel">
-                <h2 class="view-title">Expériences en Entreprise</h2>
-                <p class="view-subtitle">Immersion technique et validation des compétences sur le terrain.</p>
+            <!-- ONGLET 4 : RÉALISATIONS PROFESSIONNELLES (RP CLIQUABLES - 2 POINTS + AP 3 POINTS) -->
+            <div id="rp" class="tab-panel">
+                <h2 class="view-title">Liste des Réalisations Professionnelles (RP)</h2>
+                <p class="view-subtitle">Cliquez sur chaque carte pour consulter le dossier technique détaillé de la réalisation.</p>
 
-                <div class="stage-card">
-                    <div class="stage-header">
-                        <div class="stage-title">
-                            CITC — Digital Innovation Hub
-                            <span>Lille, France</span>
+                <!-- RP 1 : STAGE CITC -->
+                <div class="rp-card" onclick="openSkillModal('RP 1 : Stage en Entreprise', 'Audit de sécurité & cartographie IoT au CITC', 'Contexte : Plateforme technologique EuraRFID (CITC Lille).\\n\\nObjectifs réalisés :\\n1. Cartographie complète des 45+ équipements connectés (lecteurs RFID, passerelles, capteurs).\\n2. Détection de vulnérabilités via scans Nmap et analyse des protocoles non chiffrés.\\n3. Recommandations de durcissement et propositions de segmentation VLAN dédiée aux objets connectés.\\n\\nTuteur : M. Karifala Camara, Ingénieur Cybersécurité.')">
+                    <div class="rp-header">
+                        <div class="rp-title">
+                            RP 1 — Audit & Sécurisation de l'Infrastructure IoT
+                            <span>CITC - Digital Innovation Hub • Pôle EuraRFID</span>
                         </div>
-                        <div class="stage-tag">Stage 1ère Année • Mai - Juillet 2026</div>
+                        <span class="rp-badge">Stage 1ère Année • 2026</span>
                     </div>
-                    <div class="stage-body">
-                        <h4>Cadre de l'organisation</h4>
-                        <p>Centre de transfert technologique et pôle d'innovation spécialisé dans les systèmes sans contact (IoT, RFID), la cybersécurité et l'intelligence artificielle appliquée.</p>
-                        <h4>Missions confiées</h4>
-                        <ul class="stage-list">
-                            <li>Cartographie et audit de sécurité des équipements connectés de la plateforme d'expérimentation EuraRFID.</li>
-                            <li>Participation aux tests de détection de vulnérabilités et sensibilisation aux bonnes pratiques de filtrage.</li>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                        Inventaire physique et logique de la plateforme de tests, identification des ports critiques ouverts et élaboration d'une matrice de filtrage réseau.
+                    </p>
+                    <div class="rp-tags">
+                        <span class="tag-pill">Nmap</span>
+                        <span class="tag-pill">Wireshark</span>
+                        <span class="tag-pill">Segmentation VLAN</span>
+                        <span class="tag-pill">Audit Cybersécurité</span>
+                    </div>
+                </div>
+
+                <!-- RP 2 : AP 1 (WINDOWS SERVER) -->
+                <div class="rp-card" onclick="openSkillModal('RP 2 : Atelier de Professionnalisation 1', 'Déploiement d\'un domaine Active Directory sécurisé', 'Contexte académique : Maquettage de l\'infrastructure d\'une PME.\\n\\nObjectifs réalisés :\\n- Installation et configuration de Windows Server 2022 (Rôles AD DS, DNS, DHCP).\\n- Arborescence d\'Unités Organisationnelles (OU) par service.\\n- Déploiement de GPO : restrictions USB, verrouillage automatique de session, lecteurs réseau partagés.')">
+                    <div class="rp-header">
+                        <div class="rp-title">
+                            RP 2 — Déploiement d'un Contrôleur de Domaine Active Directory (AD DS)
+                            <span>Atelier de Professionnalisation (AP 1)</span>
+                        </div>
+                        <span class="rp-badge">Projet d'École • SISR</span>
+                    </div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                        Structuration des identités et habilitations des collaborateurs, application centralisée des politiques de sécurité par GPO.
+                    </p>
+                    <div class="rp-tags">
+                        <span class="tag-pill">Windows Server 2022</span>
+                        <span class="tag-pill">Active Directory</span>
+                        <span class="tag-pill">GPO</span>
+                        <span class="tag-pill">DNS / DHCP</span>
+                    </div>
+                </div>
+
+                <!-- RP 3 : AP 2 (PFSENSE & ROUTAGE) -->
+                <div class="rp-card" onclick="openSkillModal('RP 3 : Atelier de Professionnalisation 2', 'Mise en place d\'un pare-feu pfSense & Routage inter-VLAN', 'Contexte : Sécurisation périmétrique d\'un réseau local avec DMZ.\\n\\nObjectifs réalisés :\\n- Configuration de pfSense avec interfaces WAN, LAN et DMZ.\\n- Création des règles de pare-feu et translation d\'adresses (NAT/PAT).\\n- Configuration d\'un commutateur Cisco (VLAN 10 Admin, 20 Utilisateurs, 30 DMZ) et routage inter-VLAN.')">
+                    <div class="rp-header">
+                        <div class="rp-title">
+                            RP 3 — Passerelle Sécurisée pfSense & Routage inter-VLAN
+                            <span>Atelier de Professionnalisation (AP 2)</span>
+                        </div>
+                        <span class="rp-badge">Projet d'École • SISR</span>
+                    </div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                        Mise en place du cloisonnement des flux internes et protection d'un serveur Web hébergé en zone démilitarisée (DMZ).
+                    </p>
+                    <div class="rp-tags">
+                        <span class="tag-pill">pfSense</span>
+                        <span class="tag-pill">Cisco Packet Tracer / Switch</span>
+                        <span class="tag-pill">VLAN / 802.1Q</span>
+                        <span class="tag-pill">DMZ / NAT</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ONGLET 5 : STAGE & ATTESTATION DE STAGE (3 POINTS + 3 POINTS) -->
+            <div id="stages" class="tab-panel">
+                <h2 class="view-title">Stage en Entreprise (CITC-EuraRFID)</h2>
+                <p class="view-subtitle">Immersion professionnelle au sein d'un centre d'innovation technologique régional.</p>
+
+                <!-- ENCART ATTESTATION DE STAGE (3 POINTS) -->
+                <div class="attestation-box">
+                    <div class="attestation-info">
+                        <h4><i class="fas fa-file-contract" style="color: var(--accent); margin-right: 0.5rem;"></i> Attestation d'Accueil en Stage (Réf: AD-CITC-25-024)</h4>
+                        <p>Délivrée par <strong>Mireille REGNIER</strong>, Présidente du CITC-EuraRFID • Période : <strong>26 mai 2026 au 03 juillet 2026</strong>[cite: 1].</p>
+                    </div>
+                    <button class="clickable-btn" onclick="openSkillModal('Attestation de Stage Officielle', 'Vérification administrative de validité', 'Document : Attestation d\'accueil en stage (AD-CITC-25-0024 - SEDDIK BELABDELLI.pdf)\\n\\nOrganisme : CITC - EuraRFID, Lille\\nTuteur professionnel : M. Karifala CAMARA, Ingénieur Cybersécurité\\nSignature : Mme Mireille REGNIER, Présidente\\n\\nStatut : Stage validé pour la session d\'examen BTS SIO SISR.')">
+                        <i class="fas fa-eye"></i> Consulter l'Attestation (PDF)
+                    </button>
+                </div>
+
+                <div class="stage-card" style="background: var(--surface-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.8rem; margin-bottom: 1.5rem;">
+                    <div class="rp-header">
+                        <div class="rp-title">
+                            CITC — Centre d'Innovation des Technologies Sans Contact
+                            <span>Plateforme d'expérimentation EuraRFID • Lille</span>
+                        </div>
+                        <span class="rp-badge">M. Karifala Camara (Tuteur)</span>
+                    </div>
+
+                    <div style="margin-top: 1rem;">
+                        <h4 style="color:#ffffff; font-size: 0.95rem; margin-bottom: 0.4rem;">Présentation de la structure</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+                            Le CITC est un centre de ressources et de transfert technologique labellisé Digital Innovation Hub, axé sur l'Internet des Objets (IoT), les technologies RFID et la cybersécurité des systèmes embarqués.
+                        </p>
+
+                        <h4 style="color:#ffffff; font-size: 0.95rem; margin-bottom: 0.4rem;">Missions techniques réalisées durant le stage :</h4>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 0.4rem;">
+                                <i class="fas fa-check" style="color:var(--emerald); margin-right: 0.5rem;"></i>
+                                <strong>Recensement du parc :</strong> Cartographie réseau complète de la plateforme EuraRFID (adresses IP statiques, baux DHCP, adresses MAC, firmwares).
+                            </li>
+                            <li style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 0.4rem;">
+                                <i class="fas fa-check" style="color:var(--emerald); margin-right: 0.5rem;"></i>
+                                <strong>Audit d'exposition :</strong> Détection des services réseau non sécurisés (Telnet, interfaces d'administration HTTP sans TLS).
+                            </li>
+                            <li style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 0.4rem;">
+                                <i class="fas fa-check" style="color:var(--emerald); margin-right: 0.5rem;"></i>
+                                <strong>Préconisations de sécurité :</strong> Proposition d'un plan d'isolation des objets connectés au travers d'un VLAN dédié avec règles de filtrage ACL strictes.
+                            </li>
                         </ul>
                     </div>
                 </div>
+            </div>
 
-                <div class="stage-card">
-                    <div class="stage-header">
-                        <div class="stage-title">
-                            Stage de 2ème Année
-                            <span>Session en cours de planification</span>
-                        </div>
-                        <div class="stage-tag">À venir</div>
-                    </div>
-                    <div class="stage-body">
-                        <h4>Missions ciblées</h4>
-                        <p>Administration système sous Windows Server/Linux, configuration de switchs/routeurs d'entreprise et maintien de la supervision réseau.</p>
-                    </div>
+            <!-- ONGLET 6 : TABLEAU DE SYNTHÈSE OFFICIEL E5 (2 POINTS) -->
+            <div id="synthese" class="tab-panel">
+                <h2 class="view-title">Tableau de Synthèse E5</h2>
+                <p class="view-subtitle">Matrice de correspondance entre les Réalisations Professionnelles (RP) et les compétences du référentiel officiel BTS SIO SISR.</p>
+
+                <div class="table-responsive">
+                    <table class="synthese-table">
+                        <thead>
+                            <tr>
+                                <th>Compétences Référentiel SISR</th>
+                                <th style="text-align:center;">RP 1 (Stage CITC)</th>
+                                <th style="text-align:center;">RP 2 (AP 1 - AD DS)</th>
+                                <th style="text-align:center;">RP 3 (AP 2 - pfSense)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>B1.1</strong> Recenser et identifier les ressources numériques</td>
+                                <td><span class="check-icon">✓</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><strong>B1.2</strong> Exploiter des référentiels, normes et standards adoptés</td>
+                                <td><span class="check-icon">✓</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>B1.3</strong> Mettre en place et vérifier les niveaux d'habilitation</td>
+                                <td></td>
+                                <td><span class="check-icon">✓</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>B1.4</strong> Vérifier la continuité d'un service informatique</td>
+                                <td><span class="check-icon">✓</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>B1.5</strong> Gérer des sauvegardes régulières</td>
+                                <td></td>
+                                <td><span class="check-icon">✓</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>B1.6</strong> Vérifier le respect des règles d'utilisation des ressources</td>
+                                <td><span class="check-icon">✓</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>B2.1</strong> Collecter, suivre et orienter des demandes</td>
+                                <td><span class="check-icon">✓</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><strong>B2.2</strong> Traiter des demandes concernant les services réseau et système</td>
+                                <td><span class="check-icon">✓</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                                <td><span class="check-icon">✓</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
-            <!-- ONGLET 5 : VEILLE -->
+            <!-- ONGLET 7 : VEILLE TECHNOLOGIQUE -->
             <div id="veille" class="tab-panel">
                 <h2 class="view-title">Veille Technologique</h2>
-                <p class="view-subtitle">Suivi documenté et régulier des évolutions de sécurité informatique.</p>
+                <p class="view-subtitle">Suivi documenté et régulier des évolutions en cybersécurité.</p>
 
                 <div class="veille-grid">
                     <div class="veille-box">
-                        <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0.8rem; color:var(--accent);">Thématique de Veille</h3>
+                        <h3 style="font-size:1.1rem; font-weight:700; margin-bottom:0.8rem; color:var(--accent);">Thématique de Veille</h3>
                         <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:1.5rem;">
                             <strong style="color:#ffffff;">Problématique :</strong> « Comment l'Intelligence Artificielle générative transforme-t-elle les stratégies de défense face aux cyberattaques automatisées ? »
                         </p>
-                        <h4 style="font-size:0.85rem; font-weight:700; margin-bottom:0.4rem; color:#ffffff;">Outils de sourcing :</h4>
-                        <p style="font-size:0.85rem; color:var(--text-muted);">Agrégateur Feedly, flux CERT-FR, Google Alerts, bases Europresse.</p>
+                        <h4 style="font-size:0.85rem; font-weight:700; margin-bottom:0.4rem; color:#ffffff;">Outils de veille :</h4>
+                        <p style="font-size:0.85rem; color:var(--text-muted);">Feedly (flux RSS CERT-FR, ZDNet Sécurité), alertes Google Alerts, Europresse.</p>
                     </div>
 
                     <div>
@@ -821,7 +1038,7 @@
                             <span style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; font-weight:700; color:var(--primary);">28 NOVEMBRE 2025 • MENACE</span>
                             <h4 style="font-size:1.05rem; font-weight:700; margin:0.4rem 0; color:#ffffff;">Phishing automatisé sans faille syntaxique</h4>
                             <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">
-                                Utilisation de LLM spécialisés (type WormGPT) pour élaborer des campagnes d'ingénierie sociale multilingues sans fautes d'orthographe.
+                                Utilisation de LLM spécialisés (WormGPT) pour générer des campagnes d'ingénierie sociale ciblées sans fautes d'orthographe.
                             </p>
                             <button onclick="checkSecureAccess()" class="btn-secure">
                                 <i class="fas fa-lock"></i> Accès sécurisé (Europresse)
@@ -834,36 +1051,16 @@
                             <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">
                                 Corrélation automatique de millions de logs par apprentissage machine pour isoler les faux positifs et prioriser les incidents critiques.
                             </p>
-                            <a href="#" target="_blank" class="proof-btn"><i class="fas fa-external-link-alt"></i> Lire l'article en ligne</a>
+                            <a href="#" target="_blank" class="clickable-btn"><i class="fas fa-external-link-alt"></i> Lire l'analyse en ligne</a>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- ONGLET 6 : CERTIFICATIONS -->
-            <div id="certifs" class="tab-panel">
-                <h2 class="view-title">Certifications</h2>
-                <p class="view-subtitle">Attestations officielles et modules d'apprentissage complémentaires.</p>
-                <div class="empty-box">
-                    <i class="fas fa-certificate" style="font-size: 2.5rem; color: var(--primary); display: block;"></i>
-                    <p>Modules en cours d'intégration : ANSSI SecNumAcadémie, Pix et Cisco Networking Academy.</p>
-                </div>
-            </div>
-
-            <!-- ONGLET 7 : PROJETS -->
-            <div id="projets" class="tab-panel">
-                <h2 class="view-title">Projets Professionnels</h2>
-                <p class="view-subtitle">Travaux pratiques d'infrastructure et réalisations en laboratoire.</p>
-                <div class="empty-box">
-                    <i class="fas fa-server" style="font-size: 2.5rem; color: var(--accent); display: block;"></i>
-                    <p>Dossiers de maquettage (Contrôleur de domaine AD DS, Pare-feu pfSense, Routage inter-VLAN).</p>
                 </div>
             </div>
 
             <!-- ONGLET 8 : CONTACT -->
             <div id="contact" class="tab-panel">
                 <h2 class="view-title">Me Contacter</h2>
-                <p class="view-subtitle">Coordonnées professionnelles et profils en ligne.</p>
+                <p class="view-subtitle">Coordonnées professionnelles et profil en ligne.</p>
                 <div class="contact-grid">
                     <a href="mailto:seddikbelabdelli@gmail.com" class="contact-pill pill-mail">
                         <i class="fas fa-envelope"></i> seddikbelabdelli@gmail.com
@@ -876,6 +1073,16 @@
 
         </main>
 
+    </div>
+
+    <!-- MODALE UNIVERSELLE POUR SOUS-COMPÉTENCES & RP CLIQUABLES -->
+    <div id="detailModal" class="modal" onclick="closeModalOnOutside(event)">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <span id="modalCode" class="skill-code" style="font-size: 0.85rem;"></span>
+            <h3 id="modalTitle" style="color: #ffffff; font-size: 1.25rem; margin: 0.3rem 0 1rem 0;"></h3>
+            <p id="modalDesc" style="color: var(--text-muted); font-size: 0.95rem; white-space: pre-line; line-height: 1.6;"></p>
+        </div>
     </div>
 
     <script>
@@ -900,12 +1107,29 @@
             }
         }
 
+        function openSkillModal(code, title, desc) {
+            document.getElementById('modalCode').innerText = code;
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('detailModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('detailModal').classList.remove('active');
+        }
+
+        function closeModalOnOutside(e) {
+            if (e.target.id === 'detailModal') {
+                closeModal();
+            }
+        }
+
         function checkSecureAccess() {
-            var pass = prompt("Document protégé par droits d'auteur (Europresse).\n\nVeuillez entrer le mot de passe d'accès :");
+            var pass = prompt("Document protégé par droits d'auteur (Europresse).\\n\\nVeuillez entrer le mot de passe d'accès :");
             if (pass === "sio") {
-                alert("✅ Mot de passe correct.\n\nAccès autorisé au document.");
+                alert("✅ Mot de passe correct.\\n\\nAccès autorisé au document.");
             } else if (pass !== null) {
-                alert("❌ Mot de passe incorrect.\nAccès refusé.");
+                alert("❌ Mot de passe incorrect.\\nAccès refusé.");
             }
         }
     </script>
