@@ -71,7 +71,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            max-width: 1320px;
+            max-width: 1280px;
             margin: 0 auto;
             padding: 1.5rem;
             gap: 1.5rem;
@@ -210,10 +210,11 @@
         }
 
         .hero-layout {
-            max-width: 920px;
+            max-width: 860px;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            height: 100%;
         }
 
         .badge-soft {
@@ -240,7 +241,7 @@
         }
 
         .hero-title {
-            font-size: 3.2rem;
+            font-size: 3.4rem;
             font-weight: 800;
             line-height: 1.15;
             margin-bottom: 1.4rem;
@@ -251,9 +252,9 @@
         }
 
         .hero-lead {
-            font-size: 1.1rem;
+            font-size: 1.12rem;
             color: var(--text-muted);
-            margin-bottom: 2.2rem;
+            margin-bottom: 2.5rem;
             line-height: 1.7;
         }
 
@@ -281,7 +282,6 @@
             display: flex;
             align-items: center;
             gap: 0.6rem;
-            text-decoration: none;
         }
 
         .btn-shortcut i {
@@ -373,7 +373,7 @@
 
         .grid-skills {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1rem;
         }
 
@@ -381,7 +381,7 @@
             background: var(--surface-card);
             border: 1px solid var(--border);
             border-radius: var(--radius-md);
-            padding: 1.3rem;
+            padding: 1.2rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -395,8 +395,8 @@
         }
 
         .subskill-card p {
-            font-size: 0.92rem;
-            font-weight: 600;
+            font-size: 0.9rem;
+            font-weight: 500;
             color: #e2e8f0;
             margin-bottom: 0.6rem;
         }
@@ -405,7 +405,7 @@
             font-size: 0.75rem;
             color: var(--accent);
             font-family: 'JetBrains Mono', monospace;
-            margin-bottom: 0.9rem;
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
             gap: 0.4rem;
@@ -425,37 +425,12 @@
             display: inline-flex;
             align-items: center;
             gap: 0.4rem;
-            cursor: pointer;
         }
 
         .proof-btn:hover {
             background: var(--accent);
             color: #0f172a;
             border-color: var(--accent);
-        }
-
-        .proof-btn-primary {
-            background: rgba(99, 102, 241, 0.15);
-            border-color: rgba(99, 102, 241, 0.35);
-            color: #c7d2fe;
-        }
-
-        .proof-btn-primary:hover {
-            background: var(--primary);
-            color: #ffffff;
-            border-color: var(--primary);
-        }
-
-        .proof-btn-download {
-            background: rgba(16, 185, 129, 0.15);
-            border-color: rgba(16, 185, 129, 0.35);
-            color: #6ee7b7;
-        }
-
-        .proof-btn-download:hover {
-            background: var(--emerald);
-            color: #0f172a;
-            border-color: var(--emerald);
         }
 
         .stage-card {
@@ -540,7 +515,7 @@
         }
 
         .stage-docs {
-            margin-top: 1.4rem;
+            margin-top: 1.2rem;
             display: flex;
             gap: 0.8rem;
             flex-wrap: wrap;
@@ -548,7 +523,7 @@
 
         .rp-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 1.5rem;
             margin-top: 1rem;
         }
@@ -579,7 +554,7 @@
         }
 
         .rp-name {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             font-weight: 700;
             color: #ffffff;
             margin-bottom: 0.6rem;
@@ -588,134 +563,70 @@
         .rp-desc {
             font-size: 0.9rem;
             color: var(--text-muted);
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             flex: 1;
         }
 
-        .rp-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
+        .veille-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.6fr;
+            gap: 1.5rem;
+        }
+
+        .veille-box {
+            background: var(--surface-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.8rem;
+        }
+
+        .veille-card {
+            background: var(--surface-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.4rem;
             margin-bottom: 1.2rem;
+            transition: all 0.2s;
         }
 
-        .rp-badge-item {
-            font-size: 0.72rem;
-            padding: 0.2rem 0.55rem;
-            border-radius: 4px;
-            background: rgba(255, 255, 255, 0.05);
-            color: #cbd5e1;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            font-family: 'JetBrains Mono', monospace;
+        .veille-card:hover {
+            border-color: var(--border-hover);
         }
 
-        .rp-actions {
-            display: flex;
-            gap: 0.6rem;
-            flex-wrap: wrap;
-        }
-
-        .table-responsive {
-            width: 100%;
-            overflow-x: auto;
-            margin-top: 1.5rem;
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-        }
-
-        .synthesis-table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-            font-size: 0.85rem;
-        }
-
-        .synthesis-table th, .synthesis-table td {
-            padding: 1rem;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .synthesis-table th {
-            background: rgba(15, 23, 42, 0.8);
-            color: var(--accent);
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 700;
-        }
-
-        .synthesis-table tr:hover {
-            background: rgba(255, 255, 255, 0.02);
-        }
-
-        .tag-check {
-            color: var(--emerald);
-            font-size: 1rem;
-            text-align: center;
-        }
-
-        /* LECTEUR DE DOCUMENTS INTÉGRÉ */
-        #docViewerSection {
-            display: none;
-            margin-top: 2rem;
-            background: #0f172a;
-            border: 1px solid var(--border-hover);
-            border-radius: var(--radius-lg);
-            padding: 1.5rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
-        }
-
-        .viewer-header {
-            display: flex;
-            justify-content: space-between;
+        .btn-secure {
+            background: rgba(239, 68, 68, 0.12);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #fca5a5;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
             align-items: center;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 1rem;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-            gap: 1rem;
+            gap: 0.5rem;
+            transition: all 0.2s;
         }
 
-        .viewer-title-box h3 {
-            font-size: 1.25rem;
+        .btn-secure:hover {
+            background: rgba(239, 68, 68, 0.25);
             color: #ffffff;
+            border-color: #ef4444;
         }
 
-        .viewer-title-box p {
-            font-size: 0.82rem;
-            color: var(--accent);
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .viewer-controls {
-            display: flex;
-            gap: 0.6rem;
-            align-items: center;
-        }
-
-        .viewer-content {
-            background: #0b1120;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: var(--radius-md);
-            padding: 1.5rem;
-            color: #cbd5e1;
+        .empty-box {
+            background: var(--surface-card);
+            border: 1px dashed rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-lg);
+            padding: 3.5rem 2rem;
+            text-align: center;
+            color: var(--text-muted);
             font-size: 0.95rem;
-            line-height: 1.7;
         }
 
-        .viewer-iframe {
-            width: 100%;
-            height: 720px;
-            border: none;
-            border-radius: 8px;
-            background: #ffffff;
-        }
-
-        .viewer-img-full {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            display: block;
-            margin: 0 auto;
-            border: 1px solid var(--border);
+        .empty-box i {
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 0 15px var(--primary-glow));
         }
 
         .contact-grid {
@@ -740,11 +651,21 @@
             border: 1px solid transparent;
         }
 
-        .pill-mail { background: linear-gradient(135deg, #ea4335, #c5221f); }
-        .pill-mail:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(234, 67, 53, 0.3); }
+        .pill-mail {
+            background: linear-gradient(135deg, #ea4335, #c5221f);
+        }
+        .pill-mail:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(234, 67, 53, 0.3);
+        }
 
-        .pill-linkedin { background: linear-gradient(135deg, #0a66c2, #004182); }
-        .pill-linkedin:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(10, 102, 194, 0.3); }
+        .pill-linkedin {
+            background: linear-gradient(135deg, #0a66c2, #004182);
+        }
+        .pill-linkedin:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(10, 102, 194, 0.3);
+        }
 
         @media (max-width: 960px) {
             .app-container { padding: 1rem; }
@@ -752,7 +673,7 @@
             .nav-tabs { overflow-x: auto; padding-bottom: 0.5rem; width: 100%; }
             .tab-panel { padding: 1.8rem 1.2rem; }
             .hero-title { font-size: 2.3rem; }
-            .viewer-iframe { height: 480px; }
+            .veille-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -774,9 +695,11 @@
                     <li><button class="tab-btn active" onclick="switchTab('accueil')"><i class="fas fa-home"></i> Accueil</button></li>
                     <li><button class="tab-btn" onclick="switchTab('parcours')"><i class="fas fa-graduation-cap"></i> Parcours</button></li>
                     <li><button class="tab-btn" onclick="switchTab('competences')"><i class="fas fa-check-circle"></i> Sous-compétences</button></li>
-                    <li><button class="tab-btn" onclick="switchTab('rp')"><i class="fas fa-project-diagram"></i> Réalisations (RP)</button></li>
-                    <li><button class="tab-btn" onclick="switchTab('stages')"><i class="fas fa-briefcase"></i> Stage CITC</button></li>
-                    <li><button class="tab-btn" onclick="switchTab('synthese')"><i class="fas fa-table"></i> Tableau E5</button></li>
+                    <li><button class="tab-btn" onclick="switchTab('rp')"><i class="fas fa-project-diagram"></i> Réalisations Professionnelles</button></li>
+                    <li><button class="tab-btn" onclick="switchTab('stages')"><i class="fas fa-briefcase"></i> Stages</button></li>
+                    <li><button class="tab-btn" onclick="switchTab('veille')"><i class="fas fa-satellite-dish"></i> Veille</button></li>
+                    <li><button class="tab-btn" onclick="switchTab('certifs')"><i class="fas fa-award"></i> Certifications</button></li>
+                    <li><button class="tab-btn" onclick="switchTab('projets')"><i class="fas fa-network-wired"></i> Projets</button></li>
                     <li><button class="tab-btn" onclick="switchTab('contact')"><i class="fas fa-envelope"></i> Contact</button></li>
                 </ul>
             </nav>
@@ -784,492 +707,262 @@
 
         <main>
             
-            <!-- 1. ACCUEIL -->
+            <!-- ONGLET 1 : ACCUEIL -->
             <div id="accueil" class="tab-panel active">
                 <div class="hero-layout">
                     <div class="badge-soft">
                         <span class="badge-dot"></span> Session BTS 2026 • Lycée Gaston Berger
                     </div>
-                    <h2 class="hero-title">Infrastructures Réseaux, Systèmes & Cybersécurité</h2>
+                    <h2 class="hero-title">Infrastructures, Systèmes & Cybersécurité</h2>
                     <p class="hero-lead">
-                        Bienvenue sur mon portfolio d'épreuves du <strong>BTS SIO (option SISR)</strong>. L'ensemble des documents, attestations officielles, preuves de configuration et livrables techniques réalisés au <strong>CITC</strong> et en ateliers de professionnalisation sont hébergés et visualisables directement au sein de cette interface.
+                        Bonjour et bienvenue sur mon portfolio d'épreuve. Étudiant en <strong>BTS SIO (option SISR)</strong> à Lille, je présente ici mes réalisations professionnelles, mon parcours, mes compétences et mes périodes d'immersion en entreprise.
                     </p>
                     <div class="hero-shortcuts">
+                        <button class="btn-shortcut" onclick="switchTab('competences')">
+                            <i class="fas fa-tasks"></i> Liste des sous-compétences
+                        </button>
                         <button class="btn-shortcut" onclick="switchTab('rp')">
-                            <i class="fas fa-project-diagram"></i> Explorer les Réalisations (RP)
+                            <i class="fas fa-project-diagram"></i> Réalisations professionnelles (RP)
                         </button>
                         <button class="btn-shortcut" onclick="switchTab('stages')">
-                            <i class="fas fa-file-signature"></i> Consulter l'Attestation de Stage
-                        </button>
-                        <button class="btn-shortcut" onclick="switchTab('synthese')">
-                            <i class="fas fa-table"></i> Grille d'Évaluation E5
-                        </button>
-                        <button class="btn-shortcut" onclick="viewDocument('pfsense')">
-                            <i class="fas fa-file-pdf"></i> Rapport pfSense & Wazuh
+                            <i class="fas fa-briefcase"></i> Stage au CITC & Documents
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- 2. PARCOURS DE PROFESSIONNALISATION (5 points) -->
+            <!-- ONGLET 2 : PARCOURS DE PROFESSIONNALISATION -->
             <div id="parcours" class="tab-panel">
                 <h2 class="view-title">Parcours de Professionnalisation</h2>
-                <p class="view-subtitle">Cheminement académique, compétences validées et profil professionnel.</p>
-                
+                <p class="view-subtitle">Mon cheminement de formation et d'expérience vers les métiers de l'administration réseau et sécurité.</p>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <span class="t-date">26 Mai 2026 - 03 Juillet 2026</span>
-                        <h3 class="t-title">Stage en Cybersécurité & Réseaux</h3>
-                        <span class="t-place">CITC-EuraRFID — 172 Avenue de Bretagne, Lille</span>
-                        <p class="t-desc">
-                            Immersion professionnelle de 6 semaines (35h/semaine) sous l'encadrement de l'ingénieur en cybersécurité M. Karifala Camara. Déploiement d'une architecture virtualisée sous pfSense, conteneurisation Docker du SIEM Wazuh v4.9.2, audits de vulnérabilités Nmap/Metasploit, exploitation DVWA et expérimentations BadUSB avec Flipper Zero sur Raspberry Pi.
-                        </p>
+                        <span class="t-date">Mai 2026 - Juillet 2026</span>
+                        <h3 class="t-title">Stage en Cybersécurité</h3>
+                        <span class="t-place">CITC — Digital Innovation Hub, Lille</span>
+                        <p class="t-desc">Missions au sein du pôle EuraRFID sous la supervision de l'ingénieur cybersécurité M. Karifala Camara.</p>
                     </div>
                     <div class="timeline-item">
-                        <span class="t-date">2024 - 2026</span>
+                        <span class="t-date">2025 - 2027 (En cours)</span>
                         <h3 class="t-title">BTS Services Informatiques aux Organisations (SIO)</h3>
                         <span class="t-place">Lycée Gaston Berger, Lille</span>
-                        <p class="t-desc">
-                            Option SISR : Administration système (Linux / Windows Server), segmentation VLAN, protocoles de routage, supervision, virtualisation VMware et conformité réglementaire (ISO 27001).
-                        </p>
+                        <p class="t-desc">Option Solutions d’Infrastructure, Systèmes et Réseaux (SISR) : protocoles IP, routage Cisco, virtualisation et sécurité.</p>
                     </div>
                     <div class="timeline-item">
-                        <span class="t-date">2024</span>
+                        <span class="t-date">2025</span>
                         <h3 class="t-title">Baccalauréat</h3>
                         <span class="t-place">Lycée César Baggio, Lille</span>
-                        <p class="t-desc">
-                            Initiation aux sciences du numérique, algorithmique et bases des architectures matérielles.
-                        </p>
+                        <p class="t-desc">Obtention du baccalauréat et orientation vers le domaine informatique.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- 3. LISTE DES SOUS-COMPÉTENCES CLIQUABLES (2 points) -->
+            <!-- ONGLET 3 : LISTE DES SOUS-COMPÉTENCES CLIQUABLES -->
             <div id="competences" class="tab-panel">
-                <h2 class="view-title">Sous-Compétences Référentiel SISR</h2>
-                <p class="view-subtitle">Chaque sous-compétence ouvre le livrable technique correspondant directement dans le lecteur intégré.</p>
+                <h2 class="view-title">Liste des Sous-Compétences</h2>
+                <p class="view-subtitle">Justificatifs et fiches preuves cliquables rattachés aux compétences et aux acquis de stage.</p>
 
-                <!-- BLOC 1 -->
                 <div class="bloc-competence">
-                    <h3 class="bloc-title">Bloc 1 : Support et mise à disposition de services informatiques</h3>
+                    <h3 class="bloc-title">1. Gérer le patrimoine informatique</h3>
                     <div class="grid-skills">
                         <div class="subskill-card">
-                            <p>B1.1 - Gérer le patrimoine informatique (Topologie & Adressage)</p>
-                            <span class="stage-context-badge"><i class="fas fa-tag"></i> Stage CITC : Cartographie pfSense</span>
-                            <button class="proof-btn" onclick="viewDocument('pfsense')"><i class="fas fa-eye"></i> Ouvrir le livrable pfSense</button>
+                            <p>Recenser et identifier les ressources numériques</p>
+                            <span class="stage-context-badge"><i class="fas fa-tag"></i> Fait au CITC : Cartographie EuraRFID</span>
+                            <a href="Rapport_Architecture_pfSense_Wazuh%20(2).pdf" target="_blank" class="proof-btn"><i class="fas fa-file-pdf"></i> Fiche preuve</a>
                         </div>
                         <div class="subskill-card">
-                            <p>B1.2 - Répondre aux incidents et aux demandes d'assistance</p>
-                            <span class="stage-context-badge"><i class="fas fa-tag"></i> Stage CITC : Détection alertes Wazuh</span>
-                            <button class="proof-btn" onclick="viewDocument('pfsense')"><i class="fas fa-eye"></i> Ouvrir le livrable Wazuh</button>
+                            <p>Exploiter des référentiels, normes et standards adoptés</p>
+                            <a href="Rapport_iso%2027001.pdf" target="_blank" class="proof-btn"><i class="fas fa-file-pdf"></i> Fiche preuve</a>
                         </div>
                         <div class="subskill-card">
-                            <p>B1.3 - Développer la présence en ligne de l'organisation</p>
-                            <span class="stage-context-badge"><i class="fas fa-tag"></i> Stage CITC : Serveur Web DMZ (Port 8080)</span>
-                            <button class="proof-btn" onclick="viewDocument('audit')"><i class="fas fa-eye"></i> Ouvrir le livrable Web DMZ</button>
+                            <p>Mettre en place et vérifier les niveaux d'habilitation</p>
+                            <a href="Rapport_Architecture_pfSense_Wazuh%20(2).pdf" target="_blank" class="proof-btn"><i class="fas fa-file-pdf"></i> Fiche preuve</a>
                         </div>
                         <div class="subskill-card">
-                            <p>B1.4 - Travailler en mode projet & organisation</p>
-                            <span class="stage-context-badge"><i class="fas fa-tag"></i> AP Connect Euratech : Ratios AFNOR</span>
-                            <button class="proof-btn" onclick="viewDocument('euratech')"><i class="fas fa-eye"></i> Ouvrir le livrable Euratech</button>
+                            <p>Vérifier les conditions de la continuité d'un service informatique</p>
+                            <a href="Rapport_Architecture_pfSense_Wazuh%20(2).pdf" target="_blank" class="proof-btn"><i class="fas fa-file-pdf"></i> Fiche preuve</a>
+                        </div>
+                        <div class="subskill-card">
+                            <p>Gérer des sauvegardes régulières</p>
+                            <a href="Rapport_Architecture_pfSense_Wazuh%20(2).pdf" target="_blank" class="proof-btn"><i class="fas fa-file-pdf"></i> Fiche preuve</a>
+                        </div>
+                        <div class="subskill-card">
+                            <p>Vérifier le respect des règles d'utilisation des ressources</p>
+                            <a href="Rapport_iso%2027001.pdf" target="_blank" class="proof-btn"><i class="fas fa-file-pdf"></i> Fiche preuve</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- BLOC 2 -->
                 <div class="bloc-competence">
-                    <h3 class="bloc-title">Bloc 2 : Administration des systèmes et des réseaux</h3>
+                    <h3 class="bloc-title">2. Répondre aux incidents et aux demandes d'assistance</h3>
                     <div class="grid-skills">
                         <div class="subskill-card">
-                            <p>B2.1 - Concevoir une solution d'infrastructure réseau</p>
-                            <span class="stage-context-badge"><i class="fas fa-tag"></i> AP Euratech : Découpage VLSM /14</span>
-                            <button class="proof-btn" onclick="viewDocument('euratech')"><i class="fas fa-eye"></i> Ouvrir le plan d'adressage</button>
+                            <p>Collecter, suivre et orienter des demandes (Ticketing)</p>
+                            <a href="Rapport_Architecture_pfSense_Wazuh%20(2).pdf" target="_blank" class="proof-btn"><i class="fas fa-file-pdf"></i> Fiche preuve</a>
                         </div>
                         <div class="subskill-card">
-                            <p>B2.2 - Installer, tester et déployer une solution d'infrastructure</p>
-                            <span class="stage-context-badge"><i class="fas fa-tag"></i> Stage CITC : VMware, pfSense & Docker</span>
-                            <button class="proof-btn" onclick="viewDocument('pfsense')"><i class="fas fa-eye"></i> Ouvrir l'architecture VMware</button>
+                            <p>Traiter des demandes concernant les services réseau et système</p>
+                            <span class="stage-context-badge"><i class="fas fa-tag"></i> Fait au CITC : Filtrage & Détection</span>
+                            <a href="Rapport_Architecture_pfSense_Wazuh%20(2).pdf" target="_blank" class="proof-btn"><i class="fas fa-file-pdf"></i> Fiche preuve</a>
                         </div>
                         <div class="subskill-card">
-                            <p>B2.3 - Exploiter, dépanner et superviser une infrastructure réseau</p>
-                            <span class="stage-context-badge"><i class="fas fa-tag"></i> Stage CITC : SIEM Wazuh & port 1514/TCP</span>
-                            <button class="proof-btn" onclick="viewDocument('pfsense')"><i class="fas fa-eye"></i> Ouvrir la supervision Wazuh</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- BLOC 3 -->
-                <div class="bloc-competence">
-                    <h3 class="bloc-title">Bloc 3 : Cybersécurité des services informatiques</h3>
-                    <div class="grid-skills">
-                        <div class="subskill-card">
-                            <p>B3.1 - Protéger les données à caractère personnel & conformité</p>
-                            <span class="stage-context-badge"><i class="fas fa-tag"></i> Normes : ISO 27001, NIS2, DORA, RGPD</span>
-                            <button class="proof-btn" onclick="viewDocument('iso')"><i class="fas fa-eye"></i> Ouvrir le dossier ISO 27001</button>
-                        </div>
-                        <div class="subskill-card">
-                            <p>B3.2 - Préserver l'intégrité, la confidentialité et la disponibilité</p>
-                            <span class="stage-context-badge"><i class="fas fa-tag"></i> Filtrage : Règles pfSense LAN / DMZ</span>
-                            <button class="proof-btn" onclick="viewDocument('pfsense')"><i class="fas fa-eye"></i> Ouvrir les règles pfSense</button>
-                        </div>
-                        <div class="subskill-card">
-                            <p>B3.3 - Sécuriser les accès et détecter les intrusions</p>
-                            <span class="stage-context-badge"><i class="fas fa-tag"></i> Wazuh : Détection Force Brute Niveau 10</span>
-                            <button class="proof-btn" onclick="viewDocument('pfsense')"><i class="fas fa-eye"></i> Ouvrir la détection Brute Force</button>
-                        </div>
-                        <div class="subskill-card">
-                            <p>B3.4 - Auditer la sécurité technique (Pentest & Scans)</p>
-                            <span class="stage-context-badge"><i class="fas fa-tag"></i> Audit : Kali, Nmap, Metasploit, Burp</span>
-                            <button class="proof-btn" onclick="viewDocument('audit')"><i class="fas fa-eye"></i> Ouvrir le rapport d'audit</button>
-                        </div>
-                        <div class="subskill-card">
-                            <p>B3.5 - Sécurité applicative Web & Injections SQL</p>
-                            <span class="stage-context-badge"><i class="fas fa-tag"></i> TP DVWA : Exploitation & sqlmap</span>
-                            <button class="proof-btn" onclick="viewDocument('sqli')"><i class="fas fa-eye"></i> Ouvrir le TP Injections SQL</button>
-                        </div>
-                        <div class="subskill-card">
-                            <p>B3.6 - Hacking Éthique USB & Vulnérabilités Matérielles</p>
-                            <span class="stage-context-badge"><i class="fas fa-tag"></i> TP BadUSB : Flipper Zero & Raspberry Pi</span>
-                            <button class="proof-btn" onclick="viewDocument('flipper')"><i class="fas fa-eye"></i> Ouvrir le TP Flipper Zero</button>
+                            <p>Traiter des demandes concernant les applications</p>
+                            <a href="SQL_TP%20sur%20les%20injections%20SQL.pdf" target="_blank" class="proof-btn"><i class="fas fa-file-pdf"></i> Fiche preuve</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 4. RÉALISATIONS PROFESSIONNELLES (RP) (2 points) -->
+            <!-- ONGLET 4 : RÉALISATIONS PROFESSIONNELLES (RP 1ÈRE ANNÉE SISR) -->
             <div id="rp" class="tab-panel">
                 <h2 class="view-title">Réalisations Professionnelles (1ère année SISR)</h2>
-                <p class="view-subtitle">Consultez directement les livrables au format PDF ou téléchargez-les sur votre poste.</p>
+                <p class="view-subtitle">Travaux pratiques, ateliers professionnels (AP) et missions réalisées en stage.</p>
 
                 <div class="rp-grid">
-                    
-                    <!-- RP 1 -->
                     <div class="rp-card">
                         <div>
-                            <span class="rp-type">RP 1 • Stage CITC (Infrastructure & Supervision)</span>
-                            <h3 class="rp-name">Déploiement pfSense & SIEM Wazuh</h3>
-                            <p class="rp-desc">
-                                Mise en œuvre d'une architecture virtualisée sous VMware Workstation. Segmentation réseau étanche (LAN VMnet 2/3/4 et DMZ VMnet 5 sur port 8080), filtrage dynamique pfSense et déploiement conteneurisé du SIEM Wazuh v4.9.2 sous Docker. Règle personnalisée de détection des attaques par force brute (5 échecs en 60s déclenchant une alerte critique niveau 10).
-                            </p>
-                            <div class="rp-badges">
-                                <span class="rp-badge-item">pfSense</span>
-                                <span class="rp-badge-item">Wazuh SIEM</span>
-                                <span class="rp-badge-item">Docker</span>
-                                <span class="rp-badge-item">VMware</span>
-                                <span class="rp-badge-item">Règles de filtrage</span>
-                            </div>
+                            <span class="rp-type">Stage 1ère Année • CITC</span>
+                            <h3 class="rp-name">Audit & Cartographie de Sécurité EuraRFID</h3>
+                            <p class="rp-desc">Recensement des objets connectés, identification des vulnérabilités sur la plateforme d'expérimentation et application des règles de filtrage sous la supervision de M. Karifala Camara.</p>
                         </div>
-                        <div class="rp-actions">
-                            <button class="proof-btn proof-btn-primary" onclick="viewDocument('pfsense')">
-                                <i class="fas fa-book-open"></i> Consulter le livrable
-                            </button>
-                            <a href="Rapport_Architecture_pfSense_Wazuh%20(2).pdf" download="Rapport_Architecture_pfSense_Wazuh.pdf" class="proof-btn proof-btn-download">
-                                <i class="fas fa-download"></i> Télécharger le PDF
-                            </a>
-                        </div>
+                        <a href="Rapport%20audit.pdf" target="_blank" class="proof-btn"><i class="fas fa-file-alt"></i> Consulter le rapport de RP</a>
                     </div>
 
-                    <!-- RP 2 -->
                     <div class="rp-card">
                         <div>
-                            <span class="rp-type">RP 2 • Stage CITC (Sécurité Offensive & Audit)</span>
-                            <h3 class="rp-name">Audit de Sécurité Technique & Pentest</h3>
-                            <p class="rp-desc">
-                                Audit complet en environnement contrôlé. Cartographie d'hôtes et scan de services avec Nmap (-sV, NSE vuln), exploitation d'une station Windows 10 via payload msfvenom (Reverse TCP) et console Metasploit. Interception HTTP avec le proxy Burp Suite et extraction des requêtes non chiffrées sur la DMZ.
-                            </p>
-                            <div class="rp-badges">
-                                <span class="rp-badge-item">Kali Linux</span>
-                                <span class="rp-badge-item">Nmap</span>
-                                <span class="rp-badge-item">Metasploit</span>
-                                <span class="rp-badge-item">Burp Suite</span>
-                                <span class="rp-badge-item">Reverse Shell</span>
-                            </div>
+                            <span class="rp-type">Atelier Professionnel (AP)</span>
+                            <h3 class="rp-name">Ateliers Professionnels (1ère année)</h3>
+                            <p class="rp-desc">Travaux dirigés et pratiques d'infrastructure réseau, adressage IP, routage et déploiement de services de base.</p>
                         </div>
-                        <div class="rp-actions">
-                            <button class="proof-btn proof-btn-primary" onclick="viewDocument('audit')">
-                                <i class="fas fa-book-open"></i> Consulter le livrable
-                            </button>
-                            <a href="Rapport%20audit.pdf" download="Rapport_audit.pdf" class="proof-btn proof-btn-download">
-                                <i class="fas fa-download"></i> Télécharger le PDF
-                            </a>
-                        </div>
+                        <a href="Analyse%20et%20Correction%20Plan%20R%C3%A9seau%20BTS.pdf" target="_blank" class="proof-btn"><i class="fas fa-folder-open"></i> Fiches descriptives AP</a>
                     </div>
 
-                    <!-- RP 3 -->
                     <div class="rp-card">
                         <div>
-                            <span class="rp-type">RP 3 • Stage CITC (Gouvernance & Risques)</span>
-                            <h3 class="rp-name">Conformité SMSI & Norme ISO/IEC 27001</h3>
-                            <p class="rp-desc">
-                                Dossier stratégique d'engagement dans la norme ISO 27001:2022. Analyse des statistiques de la cybermenace en France (ANSSI/CNIL), retour sur investissement face au coût moyen d'une cyberattaque, conformité croisée (RGPD, NIS2, DORA) et feuille de route de certification en 5 étapes.
-                            </p>
-                            <div class="rp-badges">
-                                <span class="rp-badge-item">ISO/IEC 27001</span>
-                                <span class="rp-badge-item">SMSI</span>
-                                <span class="rp-badge-item">Directive NIS2</span>
-                                <span class="rp-badge-item">DORA / RGPD</span>
-                                <span class="rp-badge-item">Gestion des risques</span>
-                            </div>
+                            <span class="rp-type">Synthèse & Suivi</span>
+                            <h3 class="rp-name">Tableau de Synthèse E5</h3>
+                            <p class="rp-desc">Tableau récapitulatif officiel croisant l'ensemble des réalisations professionnelles avec les compétences du référentiel SISR.</p>
                         </div>
-                        <div class="rp-actions">
-                            <button class="proof-btn proof-btn-primary" onclick="viewDocument('iso')">
-                                <i class="fas fa-book-open"></i> Consulter le livrable
-                            </button>
-                            <a href="Rapport_iso%2027001.pdf" download="Rapport_iso_27001.pdf" class="proof-btn proof-btn-download">
-                                <i class="fas fa-download"></i> Télécharger le PDF
-                            </a>
-                        </div>
+                        <a href="Grille%20%C3%A9valuation%20Epreuve%20portefeuille%20de%20competences.pdf" target="_blank" class="proof-btn"><i class="fas fa-table"></i> Télécharger le tableau de synthèse</a>
                     </div>
-
-                    <!-- RP 4 / AP -->
-                    <div class="rp-card">
-                        <div>
-                            <span class="rp-type">RP 4 • Atelier Professionnel (AP)</span>
-                            <h3 class="rp-name">Ingénierie Réseau « Connect Euratech »</h3>
-                            <p class="rp-desc">
-                                Refonte et dimensionnement du réseau du campus technologique EuraTechnologies (site Le Blan-Lafont). Calcul de charge surfacique et densité selon la norme AFNOR NF X 35-102 (5 personnes pour 15 m²), dimensionnement des hôtes (3 terminaux par collaborateur) et découpage IP dans le super-réseau 10.0.0.0/14 sans chevauchement.
-                            </p>
-                            <div class="rp-badges">
-                                <span class="rp-badge-item">AFNOR NF X 35-102</span>
-                                <span class="rp-badge-item">CIDR /14</span>
-                                <span class="rp-badge-item">VLSM</span>
-                                <span class="rp-badge-item">Switch Hardening</span>
-                                <span class="rp-badge-item">VLAN</span>
-                            </div>
-                        </div>
-                        <div class="rp-actions">
-                            <button class="proof-btn proof-btn-primary" onclick="viewDocument('euratech')">
-                                <i class="fas fa-book-open"></i> Consulter le livrable
-                            </button>
-                            <a href="Analyse%20et%20Correction%20Plan%20R%C3%A9seau%20BTS.pdf" download="Analyse_Correction_Plan_Reseau_BTS.pdf" class="proof-btn proof-btn-download">
-                                <i class="fas fa-download"></i> Télécharger le PDF
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- RP 5 : Sécurité Applicative Web -->
-                    <div class="rp-card">
-                        <div>
-                            <span class="rp-type">RP 5 • TP Spécialisé Cybersécurité</span>
-                            <h3 class="rp-name">Injections SQL & Vulnérabilités Web DVWA</h3>
-                            <p class="rp-desc">
-                                Déploiement conteneurisé de DVWA sous Docker. Exploitation manuelle de vulnérabilités SQL (contournement d'authentification, extraction de tables et colonnes avec UNION SELECT) et automatisation complète de l'extraction de la base de données avec sqlmap.
-                            </p>
-                            <div class="rp-badges">
-                                <span class="rp-badge-item">DVWA</span>
-                                <span class="rp-badge-item">SQL Injection</span>
-                                <span class="rp-badge-item">sqlmap</span>
-                                <span class="rp-badge-item">Docker</span>
-                                <span class="rp-badge-item">OWASP Top 10</span>
-                            </div>
-                        </div>
-                        <div class="rp-actions">
-                            <button class="proof-btn proof-btn-primary" onclick="viewDocument('sqli')">
-                                <i class="fas fa-book-open"></i> Consulter le livrable
-                            </button>
-                            <a href="SQL_TP%20sur%20les%20injections%20SQL.pdf" download="SQL_TP_injections_SQL.pdf" class="proof-btn proof-btn-download">
-                                <i class="fas fa-download"></i> Télécharger le PDF
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- RP 6 : Hacking Éthique IoT -->
-                    <div class="rp-card">
-                        <div>
-                            <span class="rp-type">RP 6 • Stage CITC (Pôle IoT & Sécurité)</span>
-                            <h3 class="rp-name">Hacking Éthique USB (BadUSB) & Flipper Zero</h3>
-                            <p class="rp-desc">
-                                Conception d'un script BadUSB simulant un clavier automatisé pour exécuter un binaire distant sur Raspberry Pi. Chiffrement de données en Python, génération d'exécutable portable via PyInstaller et analyse des contre-mesures face aux attaques par périphériques USB.
-                            </p>
-                            <div class="rp-badges">
-                                <span class="rp-badge-item">Flipper Zero</span>
-                                <span class="rp-badge-item">BadUSB</span>
-                                <span class="rp-badge-item">Raspberry Pi</span>
-                                <span class="rp-badge-item">Python</span>
-                                <span class="rp-badge-item">Chiffrement</span>
-                            </div>
-                        </div>
-                        <div class="rp-actions">
-                            <button class="proof-btn proof-btn-primary" onclick="viewDocument('flipper')">
-                                <i class="fas fa-book-open"></i> Consulter le livrable
-                            </button>
-                            <a href="Cyber_IOT_TP%20Flipper%20Zero.pdf" download="Cyber_IOT_TP_Flipper_Zero.pdf" class="proof-btn proof-btn-download">
-                                <i class="fas fa-download"></i> Télécharger le PDF
-                            </a>
-                        </div>
-                    </div>
-
                 </div>
             </div>
 
-            <!-- 5. STAGES & ATTESTATION (3 points Stage + 3 points Attestation) -->
+            <!-- ONGLET 5 : STAGES & ATTESTATIONS -->
             <div id="stages" class="tab-panel">
-                <h2 class="view-title">Stage en Entreprise — 1ère Année SISR</h2>
-                <p class="view-subtitle">Immersion professionnelle au sein du cluster d'innovation et technologies sans contact.</p>
+                <h2 class="view-title">Expériences en Entreprise</h2>
+                <p class="view-subtitle">Immersion technique, attestations et validation des compétences sur le terrain.</p>
 
                 <div class="stage-card">
                     <div class="stage-header">
                         <div class="stage-title">
-                            CITC-EuraRFID (Centre d'Innovation des Technologies Sans Contact)
-                            <span>172 Avenue de Bretagne, 59000 Lille • Tél. : 03 20 19 18 52</span>
+                            CITC — Digital Innovation Hub
+                            <span>Lille, France</span>
                         </div>
-                        <div class="stage-tag">Stage 1ère Année • 26/05/2026 au 03/07/2026</div>
+                        <div class="stage-tag">Stage 1ère Année • Mai - Juillet 2026</div>
                     </div>
                     <div class="stage-body">
-                        <h4>Organisme d'accueil & Contexte</h4>
-                        <p>
-                            Le <strong>CITC-EuraRFID</strong> est un pôle d'excellence et de transfert technologique labellisé Digital Innovation Hub européen. Il accompagne les entreprises régionales et européennes dans l'expérimentation de technologies IoT, RFID, réseaux communicants et la sécurisation des architectures industrielles.
-                        </p>
-                        
-                        <h4>Cadre de réalisation & Volume horaire</h4>
-                        <p>
-                            Stage de <strong>6 semaines à 35h/semaine</strong> conventionné sous l'autorité du Lycée Gaston Berger, sous la supervision de l'ingénieur en cybersécurité <strong>M. Karifala Camara</strong>.
-                        </p>
-
-                        <h4>Activités et missions réalisées</h4>
+                        <h4>Cadre de l'organisation</h4>
+                        <p>Centre de transfert technologique et pôle d'innovation spécialisé dans les systèmes sans contact (IoT, RFID), la cybersécurité et l'intelligence artificielle appliquée.</p>
+                        <h4>Missions confiées</h4>
                         <ul class="stage-list">
-                            <li>Déploiement et segmentation de l'infrastructure réseau de laboratoire sous pfSense (isolation LAN, DMZ et filtrage des flux sortants/entrants).</li>
-                            <li>Installation et configuration de la supervision centralisée avec le SIEM Wazuh v4.9.2 conteneurisé sous Docker.</li>
-                            <li>Déploiement d'agents de supervision et création de règles XML de détection d'intrusions (lutte contre les attaques par force brute avec alerte critique niveau 10).</li>
-                            <li>Audits de vulnérabilités et cartographie réseau à l'aide de Kali Linux, Nmap, Metasploit et Burp Suite.</li>
-                            <li>Élaboration d'un dossier de synthèse et support de présentation sur les exigences du standard ISO/IEC 27001 (NIS2, RGPD, DORA).</li>
-                            <li>Expérimentations de sécurité offensive matérielle : TP BadUSB avec Flipper Zero et Raspberry Pi.</li>
+                            <li>Cartographie et audit de sécurité des équipements connectés de la plateforme d'expérimentation EuraRFID.</li>
+                            <li>Participation aux tests de détection de vulnérabilités et sensibilisation aux bonnes pratiques de filtrage.</li>
                         </ul>
 
                         <div class="stage-docs">
-                            <button class="proof-btn proof-btn-primary" onclick="viewDocument('attestation')">
-                                <i class="fas fa-file-signature"></i> Consulter l'Attestation Officielle Signée
+                            <a href="aattestation%20de%20stage%20citc.jpeg" target="_blank" class="proof-btn"><i class="fas fa-file-signature"></i> Attestation de stage (CITC)</a>
+                            <a href="Rapport_Architecture_pfSense_Wazuh%20(2).pdf" target="_blank" class="proof-btn"><i class="fas fa-file-pdf"></i> Rapport de stage complet</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stage-card">
+                    <div class="stage-header">
+                        <div class="stage-title">
+                            Stage de 2ème Année
+                            <span>Session en cours de planification</span>
+                        </div>
+                        <div class="stage-tag">À venir</div>
+                    </div>
+                    <div class="stage-body">
+                        <h4>Missions ciblées</h4>
+                        <p>Administration système sous Windows Server/Linux, configuration de switchs/routeurs d'entreprise et maintien de la supervision réseau.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ONGLET 6 : VEILLE -->
+            <div id="veille" class="tab-panel">
+                <h2 class="view-title">Veille Technologique</h2>
+                <p class="view-subtitle">Suivi documenté et régulier des évolutions de sécurité informatique.</p>
+
+                <div class="veille-grid">
+                    <div class="veille-box">
+                        <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0.8rem; color:var(--accent);">Thématique de Veille</h3>
+                        <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:1.5rem;">
+                            <strong style="color:#ffffff;">Problématique :</strong> « Comment l'Intelligence Artificielle générative transforme-t-elle les stratégies de défense face aux cyberattaques automatisées ? »
+                        </p>
+                        <h4 style="font-size:0.85rem; font-weight:700; margin-bottom:0.4rem; color:#ffffff;">Outils de sourcing :</h4>
+                        <p style="font-size:0.85rem; color:var(--text-muted);">Agrégateur Feedly, flux CERT-FR, Google Alerts, bases Europresse.</p>
+                    </div>
+
+                    <div>
+                        <div class="veille-card">
+                            <span style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; font-weight:700; color:var(--primary);">28 NOVEMBRE 2025 • MENACE</span>
+                            <h4 style="font-size:1.05rem; font-weight:700; margin:0.4rem 0; color:#ffffff;">Phishing automatisé sans faille syntaxique</h4>
+                            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">
+                                Utilisation de LLM spécialisés (type WormGPT) pour élaborer des campagnes d'ingénierie sociale multilingues sans fautes d'orthographe.
+                            </p>
+                            <button onclick="checkSecureAccess()" class="btn-secure">
+                                <i class="fas fa-lock"></i> Accès sécurisé (Europresse)
                             </button>
-                            <a href="aattestation%20de%20stage%20citc.jpeg" download="Attestation_Stage_CITC.jpeg" class="proof-btn proof-btn-download">
-                                <i class="fas fa-download"></i> Télécharger l'Attestation Signée
-                            </a>
-                            <button class="proof-btn" onclick="viewDocument('flipper')">
-                                <i class="fas fa-microchip"></i> Livrable TP BadUSB (CITC)
-                            </button>
+                        </div>
+
+                        <div class="veille-card">
+                            <span style="font-size:0.75rem; font-family:'JetBrains Mono', monospace; font-weight:700; color:var(--accent);">05 DÉCEMBRE 2025 • DÉFENSE</span>
+                            <h4 style="font-size:1.05rem; font-weight:700; margin:0.4rem 0; color:#ffffff;">SOC augmentés et réduction du bruit d'alerte</h4>
+                            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">
+                                Corrélation automatique de millions de logs par apprentissage machine pour isoler les faux positifs et prioriser les incidents critiques.
+                            </p>
+                            <a href="Rapport_iso%2027001.pdf" target="_blank" class="proof-btn"><i class="fas fa-external-link-alt"></i> Lire l'article en ligne</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 6. TABLEAU DE SYNTHÈSE (2 points) -->
-            <div id="synthese" class="tab-panel">
-                <h2 class="view-title">Tableau de Synthèse des Réalisations (Épreuve E5)</h2>
-                <p class="view-subtitle">Matrice de conformité officielle croisant les compétences du référentiel SISR avec mes livrables.</p>
-
-                <div style="margin-bottom: 1.5rem; display:flex; gap:0.8rem; flex-wrap:wrap;">
-                    <button class="proof-btn proof-btn-primary" onclick="viewDocument('grille')">
-                        <i class="fas fa-clipboard-check"></i> Consulter la Grille d'Aide à l'Évaluation Officielle
-                    </button>
-                    <a href="Grille%20%C3%A9valuation%20Epreuve%20portefeuille%20de%20competences.pdf" download="Grille_evaluation_E5.pdf" class="proof-btn proof-btn-download">
-                        <i class="fas fa-download"></i> Télécharger la Grille (PDF)
-                    </a>
-                </div>
-
-                <div class="table-responsive">
-                    <table class="synthesis-table">
-                        <thead>
-                            <tr>
-                                <th>Compétences Référentiel SISR (Annexe 8-3)</th>
-                                <th>RP 1 (pfSense / Wazuh)</th>
-                                <th>RP 2 (Audit Pentest)</th>
-                                <th>RP 3 (ISO 27001)</th>
-                                <th>RP 4 (Connect Euratech)</th>
-                                <th>RP 5 & 6 (SQL / Flipper)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Gérer le patrimoine informatique</td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                                <td></td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                            </tr>
-                            <tr>
-                                <td>Répondre aux incidents & demandes d'assistance</td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                            </tr>
-                            <tr>
-                                <td>Développer la présence en ligne de l'organisation</td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Travailler en mode projet</td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                            </tr>
-                            <tr>
-                                <td>Mettre à disposition des utilisateurs un service informatique</td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                                <td></td>
-                                <td></td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                            </tr>
-                            <tr>
-                                <td>Organiser son développement professionnel</td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                            </tr>
-                            <tr>
-                                <td>Concevoir & sécuriser une solution d'infrastructure réseau</td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                                <td class="tag-check"><i class="fas fa-check"></i></td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <!-- ONGLET 7 : CERTIFICATIONS -->
+            <div id="certifs" class="tab-panel">
+                <h2 class="view-title">Certifications</h2>
+                <p class="view-subtitle">Attestations officielles et modules d'apprentissage complémentaires.</p>
+                <div class="empty-box">
+                    <i class="fas fa-certificate" style="font-size: 2.5rem; color: var(--primary); display: block;"></i>
+                    <p>Modules en cours d'intégration : ANSSI SecNumAcadémie, Pix et Cisco Networking Academy.</p>
                 </div>
             </div>
 
-            <!-- 7. CONTACT -->
+            <!-- ONGLET 8 : PROJETS -->
+            <div id="projets" class="tab-panel">
+                <h2 class="view-title">Projets Professionnels</h2>
+                <p class="view-subtitle">Travaux pratiques d'infrastructure et réalisations en laboratoire.</p>
+                <div class="empty-box">
+                    <i class="fas fa-server" style="font-size: 2.5rem; color: var(--accent); display: block;"></i>
+                    <p>Dossiers de maquettage (Contrôleur de domaine AD DS, Pare-feu pfSense, Routage inter-VLAN).</p>
+                </div>
+            </div>
+
+            <!-- ONGLET 9 : CONTACT -->
             <div id="contact" class="tab-panel">
                 <h2 class="view-title">Me Contacter</h2>
-                <p class="view-subtitle">Coordonnées directes et profils professionnels.</p>
+                <p class="view-subtitle">Coordonnées professionnelles et profils en ligne.</p>
                 <div class="contact-grid">
                     <a href="mailto:seddikbelabdelli@gmail.com" class="contact-pill pill-mail">
                         <i class="fas fa-envelope"></i> seddikbelabdelli@gmail.com
                     </a>
-                    <a href="https://www.linkedin.com" target="_blank" class="contact-pill pill-linkedin">
+                    <a href="https://linkedin.com" target="_blank" class="contact-pill pill-linkedin">
                         <i class="fab fa-linkedin"></i> Profil LinkedIn
                     </a>
                 </div>
-            </div>
-
-            <!-- VISUALISEUR DE FICHIERS DIRECT SUR LA PAGE -->
-            <div id="docViewerSection">
-                <div class="viewer-header">
-                    <div class="viewer-title-box">
-                        <h3 id="viewerFileName">Document</h3>
-                        <p id="viewerFileMeta">Fichier source hébergé sur le dépôt GitHub</p>
-                    </div>
-                    <div class="viewer-controls">
-                        <a id="viewerDownloadBtn" href="#" download class="proof-btn proof-btn-download">
-                            <i class="fas fa-file-download"></i> Télécharger le document
-                        </a>
-                        <button class="proof-btn" onclick="closeDocViewer()">
-                            <i class="fas fa-times"></i> Fermer
-                        </button>
-                    </div>
-                </div>
-                <div id="viewerContent" class="viewer-content"></div>
             </div>
 
         </main>
@@ -1296,86 +989,15 @@
             if (targetBtn) {
                 targetBtn.classList.add('active');
             }
-
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        const GITHUB_FILES = {
-            attestation: {
-                title: "Attestation Officielle de Stage — Annexe IX (CITC-EuraRFID)",
-                meta: "Document administratif signé le 03/07/2026",
-                fileUrl: "aattestation%20de%20stage%20citc.jpeg",
-                type: "image"
-            },
-            pfsense: {
-                title: "Rapport Technique : Architecture Réseau Virtuelle & SIEM Wazuh",
-                meta: "Livrable RP 1 • Stage CITC",
-                fileUrl: "Rapport_Architecture_pfSense_Wazuh%20(2).pdf",
-                type: "pdf"
-            },
-            audit: {
-                title: "Rapport d'Audit Technique & Tests d'Intrusion (Pentest)",
-                meta: "Livrable RP 2 • Stage CITC",
-                fileUrl: "Rapport%20audit.pdf",
-                type: "pdf"
-            },
-            iso: {
-                title: "Dossier Stratégique : Système de Management de la Sécurité ISO/IEC 27001",
-                meta: "Livrable RP 3 • Stage CITC",
-                fileUrl: "Rapport_iso%2027001.pdf",
-                type: "pdf"
-            },
-            euratech: {
-                title: "Audit & Ingénierie Réseau : Projet Connect Euratech",
-                meta: "Livrable AP 1ère Année • Lycée Gaston Berger",
-                fileUrl: "Analyse%20et%20Correction%20Plan%20R%C3%A9seau%20BTS.pdf",
-                type: "pdf"
-            },
-            sqli: {
-                title: "Guide Pratique : Injections SQL manuelles et sqlmap sur DVWA",
-                meta: "Livrable TP • Cybersécurité Applicative",
-                fileUrl: "SQL_TP%20sur%20les%20injections%20SQL.pdf",
-                type: "pdf"
-            },
-            flipper: {
-                title: "Hacking Éthique USB : BadUSB avec Flipper Zero & Raspberry Pi",
-                meta: "Livrable TP • Pôle IoT & Cyber CITC",
-                fileUrl: "Cyber_IOT_TP%20Flipper%20Zero.pdf",
-                type: "pdf"
-            },
-            grille: {
-                title: "Grille d'Aide à l'Évaluation Officielle E5 (Annexe 8-3)",
-                meta: "Référentiel National BTS SIO",
-                fileUrl: "Grille%20%C3%A9valuation%20Epreuve%20portefeuille%20de%20competences.pdf",
-                type: "pdf"
+        function checkSecureAccess() {
+            var pass = prompt("Document protégé par droits d'auteur (Europresse).\n\nVeuillez entrer le mot de passe d'accès :");
+            if (pass === "sio") {
+                alert("✅ Mot de passe correct.\n\nAccès autorisé au document.");
+            } else if (pass !== null) {
+                alert("❌ Mot de passe incorrect.\nAccès refusé.");
             }
-        };
-
-        function viewDocument(key) {
-            const doc = GITHUB_FILES[key];
-            if (!doc) return;
-
-            document.getElementById('viewerFileName').innerText = doc.title;
-            document.getElementById('viewerFileMeta').innerText = doc.meta;
-
-            const dlBtn = document.getElementById('viewerDownloadBtn');
-            dlBtn.setAttribute('href', doc.fileUrl);
-            dlBtn.setAttribute('download', decodeURIComponent(doc.fileUrl));
-
-            const viewerContent = document.getElementById('viewerContent');
-            if (doc.type === "image") {
-                viewerContent.innerHTML = `<img src="${doc.fileUrl}" alt="${doc.title}" class="viewer-img-full">`;
-            } else {
-                viewerContent.innerHTML = `<iframe src="${doc.fileUrl}" class="viewer-iframe"></iframe>`;
-            }
-
-            const viewerSection = document.getElementById('docViewerSection');
-            viewerSection.style.display = 'block';
-            viewerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-
-        function closeDocViewer() {
-            document.getElementById('docViewerSection').style.display = 'none';
         }
     </script>
 </body>
